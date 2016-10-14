@@ -1,4 +1,4 @@
 #READ ME
 
-> cd /
+This repository is for the FISH 546 class project.
 
