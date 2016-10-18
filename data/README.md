@@ -52,3 +52,20 @@ This directory contains 48 compressed files from 24 coho salmon liver samples se
 |G.2.fastq.gz|07ASW709
 |H.1.fastq.gz|04ASW709
 |H.2.fastq.gz|04ASW709
+
+Other Files:
+
+tran2.* blast database for coho transcriptome from Jin-Hyoung Kim et al. 2015
+transcriptome.* blast database for coho transcriptome from my de novo assembly (Summer 2016)
+probesNano.fasta: fasta file containing sequences for Nanostring probes
+reads.txt: read count file for each individual sample
+
+
+
+
+
+
+
+
+
+
