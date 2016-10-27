@@ -2,3 +2,4 @@
 *.gz
 
 *.fasta
+.Rproj.user
