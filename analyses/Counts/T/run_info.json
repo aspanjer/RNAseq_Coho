@@ -1,0 +1,9 @@
+{
+	"n_targets": 138481,
+	"n_bootstraps": 0,
+	"n_processed": 17272095,
+	"kallisto_version": "0.43.0",
+	"index_version": 10,
+	"start_time": "Tue Nov  1 09:32:42 2016",
+	"call": "./scripts/kallisto/kallisto quant -i transcriptome1 -o ./analyses/Counts/T/ /Volumes/Untitled/trimed_fastq/T.1_trimmed.fq.gz /Volumes/Untitled/trimed_fastq/T.2_trimmed.fq.gz"
+}
