@@ -1,0 +1,9 @@
+{
+	"n_targets": 15,
+	"n_bootstraps": 2,
+	"n_processed": 10000,
+	"kallisto_version": "0.42.4",
+	"index_version": 10,
+	"start_time": "Mon Apr  4 15:54:11 2016",
+	"call": "kallisto quant -i ind -b 2 -o out -t 2 -l 200 -s 1000 reads_1.fastq.gz reads_2.fastq.gz"
+}
