@@ -1,0 +1,47 @@
+[2016-10-27 07:56:04,173] multiqc                                            [DEBUG  ]  No MultiQC config found: /Users/andrewspanjer/anaconda/lib/python2.7/site-packages/multiqc_config.yaml
+[2016-10-27 07:56:04,174] multiqc                                            [DEBUG  ]  No MultiQC config found: /Users/andrewspanjer/.multiqc_config.yaml
+[2016-10-27 07:56:04,174] multiqc                                            [DEBUG  ]  No MultiQC config found: multiqc_config.yaml
+[2016-10-27 07:56:04,174] multiqc                                            [DEBUG  ]  No MultiQC config found: /Users/andrewspanjer/anaconda/lib/python2.7/site-packages/multiqc_config.yaml
+[2016-10-27 07:56:04,175] multiqc                                            [DEBUG  ]  No MultiQC config found: /Users/andrewspanjer/.multiqc_config.yaml
+[2016-10-27 07:56:04,175] multiqc                                            [DEBUG  ]  No MultiQC config found: multiqc_config.yaml
+[2016-10-27 07:56:04,175] multiqc                                            [DEBUG  ]  Command used: /Users/andrewspanjer/anaconda/bin/multiqc analyses/fastQC_after/ -o ./analyses/ -n multiqc_after
+[2016-10-27 07:56:04,175] multiqc                                            [DEBUG  ]  Could not connect to multiqc.info for version check
+[2016-10-27 07:56:04,175] multiqc                                            [INFO   ]  This is MultiQC v0.8
+[2016-10-27 07:56:04,176] multiqc                                            [DEBUG  ]  Command     : /Users/andrewspanjer/anaconda/bin/multiqc analyses/fastQC_after/ -o ./analyses/ -n multiqc_after
+[2016-10-27 07:56:04,176] multiqc                                            [DEBUG  ]  Working dir : /Users/andrewspanjer/RNAseq_Coho
+[2016-10-27 07:56:04,176] multiqc                                            [INFO   ]  Template    : default
+[2016-10-27 07:56:04,178] multiqc                                            [INFO   ]  Searching 'analyses/fastQC_after/'
+[2016-10-27 07:56:04,178] multiqc                                            [DEBUG  ]  Analysing modules: gatk, quast, snpeff, qualimap, bcftools, featureCounts, methylQA, rseqc, picard, preseq, samblaster, samtools, bamtools, bismark, hicup, salmon, kallisto, star, tophat, bowtie2, bowtie1, cutadapt, trimmomatic, skewer, fastq_screen, fastqc
+[2016-10-27 07:56:04,179] multiqc                                            [DEBUG  ]  Using temporary directory for creating report: /var/folders/l6/r5_8x74145q2yh75b97qr7jr0000gn/T/tmpn_S1lv
+[2016-10-27 07:56:04,664] multiqc.modules.gatk.gatk                          [DEBUG  ]  Could not find any reports in ('analyses/fastQC_after/',)
+[2016-10-27 07:56:04,682] multiqc.modules.quast.quast                        [DEBUG  ]  Could not find any reports in ('analyses/fastQC_after/',)
+[2016-10-27 07:56:04,980] multiqc.modules.snpeff.snpeff                      [DEBUG  ]  Could not find any data in ('analyses/fastQC_after/',)
+[2016-10-27 07:56:05,104] multiqc.modules.qualimap.qualimap                  [DEBUG  ]  Could not find any reports in ('analyses/fastQC_after/',)
+[2016-10-27 07:56:05,431] multiqc.modules.bcftools.bcftools                  [DEBUG  ]  Could not find any reports in ('analyses/fastQC_after/',)
+[2016-10-27 07:56:05,454] multiqc.modules.featureCounts.feature_counts       [DEBUG  ]  Could not find any reports in ('analyses/fastQC_after/',)
+[2016-10-27 07:56:05,476] multiqc.modules.methylQA.methylQA                  [DEBUG  ]  Could not find any reports in ('analyses/fastQC_after/',)
+[2016-10-27 07:56:07,470] multiqc.modules.rseqc.rseqc                        [DEBUG  ]  Could not find any reports in ('analyses/fastQC_after/',)
+[2016-10-27 07:56:10,323] multiqc.modules.picard.picard                      [DEBUG  ]  Could not find any reports in ('analyses/fastQC_after/',)
+[2016-10-27 07:56:10,687] multiqc.modules.preseq.preseq                      [DEBUG  ]  Could not find any preseq data in ('analyses/fastQC_after/',)
+[2016-10-27 07:56:11,241] multiqc.modules.samblaster.samblaster              [DEBUG  ]  Could not find any data in ('analyses/fastQC_after/',)
+[2016-10-27 07:56:12,254] multiqc.modules.samtools.samtools                  [DEBUG  ]  Could not find any reports in ('analyses/fastQC_after/',)
+[2016-10-27 07:56:12,559] multiqc.modules.bamtools.bamtools                  [DEBUG  ]  Could not find any reports in ('analyses/fastQC_after/',)
+[2016-10-27 07:56:12,667] multiqc.modules.bismark.bismark                    [DEBUG  ]  Could not find any reports in ('analyses/fastQC_after/',)
+[2016-10-27 07:56:12,694] multiqc.modules.hicup.hicup                        [DEBUG  ]  Could not find any HiCUP data in ('analyses/fastQC_after/',)
+[2016-10-27 07:56:12,734] multiqc.modules.salmon.salmon                      [DEBUG  ]  Could not find any Salmon data in ('analyses/fastQC_after/',)
+[2016-10-27 07:56:13,092] multiqc.modules.kallisto.kallisto                  [DEBUG  ]  Could not find any reports in ('analyses/fastQC_after/',)
+[2016-10-27 07:56:13,119] multiqc.modules.star.star                          [DEBUG  ]  Could not find any reports in ('analyses/fastQC_after/',)
+[2016-10-27 07:56:13,142] multiqc.modules.tophat.tophat                      [DEBUG  ]  Could not find any reports in ('analyses/fastQC_after/',)
+[2016-10-27 07:56:13,455] multiqc.modules.bowtie2.bowtie2                    [DEBUG  ]  Could not find any reports in ('analyses/fastQC_after/',)
+[2016-10-27 07:56:13,751] multiqc.modules.bowtie1.bowtie1                    [DEBUG  ]  Could not find any reports in ('analyses/fastQC_after/',)
+[2016-10-27 07:56:14,066] multiqc.modules.cutadapt.cutadapt                  [DEBUG  ]  Could not find any reports in ('analyses/fastQC_after/',)
+[2016-10-27 07:56:14,371] multiqc.modules.trimmomatic.trimmomatic            [DEBUG  ]  Could not find any Trimmomatic data in ('analyses/fastQC_after/',)
+[2016-10-27 07:56:14,644] multiqc.modules.skewer.skewer                      [DEBUG  ]  Could not find any data in ('analyses/fastQC_after/',)
+[2016-10-27 07:56:14,664] multiqc.modules.fastq_screen.fastq_screen          [DEBUG  ]  Could not find any reports in ('analyses/fastQC_after/',)
+[2016-10-27 07:57:06,955] multiqc.modules.fastqc.fastqc                      [INFO   ]  Found 48 reports
+[2016-10-27 07:57:25,512] multiqc                                            [INFO   ]  Report      : analyses/multiqc_after.html
+[2016-10-27 07:57:25,514] multiqc                                            [INFO   ]  Data        : analyses/multiqc_after_data
+[2016-10-27 07:57:25,515] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/l6/r5_8x74145q2yh75b97qr7jr0000gn/T/tmpn_S1lv/multiqc_data/multiqc_fastqc.txt' to './analyses/multiqc_after_data'
+[2016-10-27 07:57:25,516] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/l6/r5_8x74145q2yh75b97qr7jr0000gn/T/tmpn_S1lv/multiqc_data/multiqc_general_stats.txt' to './analyses/multiqc_after_data'
+[2016-10-27 07:57:25,516] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/l6/r5_8x74145q2yh75b97qr7jr0000gn/T/tmpn_S1lv/multiqc_data/multiqc_sources.txt' to './analyses/multiqc_after_data'
+[2016-10-27 07:57:25,903] multiqc                                            [INFO   ]  MultiQC complete
