@@ -15,15 +15,18 @@ This project uses sequencing data from coho collected at four streams spanning a
 
 ##Directory 
 
-Analyses: the results of each analytical step to complete the above objectives (e.g. FastQC results, trimmed sequencing files, etc)
+Analysis: the results of each analytical step to complete the above objectives (e.g. FastQC results, trimmed sequencing files, etc)
 
 BlastDB: the unique species specific blast databases used for annotating the transcriptome 
 
-Data: the 48 raw PE sequencing files for each of the 24 sampled individual fish. 
+Data_raw: the 48 raw PE sequencing files for each of the 24 sampled individual fish. 
 
-Jupyter: contains the notebook for my main class project. Focuses on the de novo assembly of a coho transcriptome and subsequent differential expression analysis and annotation. 
+Jupyter_notebook: contains the notebook for my main class project. Focuses on the de novo assembly of a coho transcriptome and subsequent differential expression analysis and annotation. 
 
-Scripts: Scripts used for analysis that aren’t download directly to my computer through Anaconda (these will be documented in my notebook). 
+Scripts: Scripts used for analysis that aren’t download directly to my computer through Anaconda (these will be documented in my notebook).
+
+Screenshots: pictures for analysis documentation
+ 
 
 ##Timeline
 
