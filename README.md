@@ -19,19 +19,20 @@ Analysis: the results of each analytical step to complete the above objectives (
 
 BlastDB: the unique species specific blast databases used for annotating the transcriptome 
 
-Data_raw: the 48 raw PE sequencing files for each of the 24 sampled individual fish. 
+Data_raw: the 48 raw PE sequencing files for each of the 24 sampled individual fish. (available on request)
 
-Jupyter_notebook: contains the notebook for my main class project. Focuses on the de novo assembly of a coho transcriptome and subsequent differential expression analysis and annotation. 
+Jupyter_notebook: contains the notebooks for my class project. Focuses on the de novo assembly of a coho transcriptome and subsequent differential expression analysis and annotation:
+
+1. [DataQC and Trinity Prep](www.github.com)
+2. [Differential Expression](www.github.com)
+3. [Annotation](www.github.com)
+4. [Gene Ontology](www.github.com)
 
 Scripts: Scripts used for analysis that aren’t download directly to my computer through Anaconda (these will be documented in my notebook).
 
 Screenshots: pictures for analysis documentation
+
+##Release Versions
+
+v.01- Initial project realease. The analyses are ongoing, but includes the basic framework for my class project. Currently waiting on complete transcriptome assembly to finish and still working on framework for GO enrichment analysis. 
  
-
-##Timeline
-
-###Week 4
-Hopefully this weekend I will get the Trinity assembly for all 24 individuals started, as this will likely take the full week to run. While this is running I plan to write up the background methods section of my transcriptome paper, thus laying out the ground work for the rest of the quarter. 
-
-###Week 5
-This week will be about conducting differential expression analysis with the samples from the different sites and running blast to annotate the transcriptome. 

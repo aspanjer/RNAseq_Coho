@@ -12,9 +12,22 @@ deseq2.dds <- DESeqDataSetFromMatrix(countData = data,
                                      colData = deseq2.colData, 
                                      design = ~ condition)
 
+?results
 deseq2.dds <- DESeq(deseq2.dds)
-deseq2.res <- results(deseq2.dds)
-deseq2.res <- deseq2.res[order(rownames(deseq2.res)), ]
+#call results table for Issaquah v. Coulter
+deseq2.IssCoulterres <- results(deseq2.dds, contrast = c("condition", "Coulter", "Issaquah"))
+deseq2.IssCoulterres <- deseq2.res[order(rownames(deseq2.IssCoulterres)), ]
+dim(deseq2.IssCoulterres[!is.na(deseq2.IssCoulterres$padj) & deseq2.IssCoulterres$padj <= 0.05,])
+
+#call results table for Jenkins v. Coulter
+deseq2.JenkCoultres<- results (deseq2.dds, contrast = c("condition", "Coulter", "Jenkins"))
+deseq2.JenkCoultres<-deseq2.res[order(rownames(deseq2.JenkCoultres)),]
+dim(deseq2.JenkCoultres[!is.na(deseq2.JenkCoultres$padj) & deseq2.JenkCoultres$padj <= 0.05,])
+
+#call results table for Swamp v Coulter
+deseq2.SwampCoultres<-results(deseq2.dds, contrast = c("condition", "Coulter", "Swamp"))
+deseq2.SwampCoultres<-deseq2.SwampCoultres[order(rownames(deseq2.SwampCoultres)),]
+dim(deseq2.SwampCoultres[!is.na(deseq2.SwampCoultres$padj) & deseq2.SwampCoultres$padj <=0.05,])
 
 head(deseq2.res, n=30)
 

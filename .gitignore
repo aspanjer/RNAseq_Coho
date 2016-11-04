@@ -5,3 +5,13 @@
 .Rproj.user
 
 *.dmg
+
+*.fq
+
+*.h5
+
+*.h5
+
+*.json
+
+analysis/Kallisto/transcriptome1
