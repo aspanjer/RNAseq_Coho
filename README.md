@@ -23,10 +23,10 @@ Data_raw: the 48 raw PE sequencing files for each of the 24 sampled individual f
 
 Jupyter_notebook: contains the notebooks for my class project. Focuses on the de novo assembly of a coho transcriptome and subsequent differential expression analysis and annotation:
 
-1. [DataQC and Trinity Prep](www.github.com)
-2. [Differential Expression](www.github.com)
-3. [Annotation](www.github.com)
-4. [Gene Ontology](www.github.com)
+1. [DataQC and Trinity Prep](https://github.com/aspanjer/RNAseq_Coho/blob/master/jupyter_notebooks/1.%20DataQC%20and%20Trinity%20Prep.ipynb)
+2. [Differential Expression](https://github.com/aspanjer/RNAseq_Coho/blob/master/jupyter_notebooks/2.%20Differential%20Expression.ipynb)
+3. [Annotation](https://github.com/aspanjer/RNAseq_Coho/blob/master/jupyter_notebooks/3.Annotation.ipynb)
+4. [Gene Ontology](http://localhost:8888/notebooks/RNAseq_Coho/jupyter_notebooks/4.%20Gene%20Ontology%20Enrichment%20Analysis.ipynb)
 
 Scripts: Scripts used for analysis that aren’t download directly to my computer through Anaconda (these will be documented in my notebook).
 
