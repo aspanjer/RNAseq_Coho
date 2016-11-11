@@ -11,13 +11,13 @@ rownames(deseq2.colData) <- colnames(data)
 deseq2.dds <- DESeqDataSetFromMatrix(countData = data,
                                      colData = deseq2.colData, 
                                      design = ~ condition)
-
 ?results
 deseq2.dds <- DESeq(deseq2.dds)
 #call results table for Issaquah v. Coulter
-deseq2.IssCoulterres <- results(deseq2.dds, contrast = c("condition", "Coulter", "Issaquah"))
-deseq2.IssCoulterres <- deseq2.res[order(rownames(deseq2.IssCoulterres)), ]
-dim(deseq2.IssCoulterres[!is.na(deseq2.IssCoulterres$padj) & deseq2.IssCoulterres$padj <= 0.05,])
+deseq2.IssCoulterres <- results(deseq2.dds, contrast= c("condition", "Issaquah", "Coulter"))
+summary(deseq2.IssCoulterres)
+deseq2.IssCoultsig<-deseq2.IssCoulterres[!is.na(deseq2.IssCoulterres$padj) & deseq2.IssCoulterres$padj <= 0.05,]
+write.table(deseq2.IssCoultsig, file="ISvCO.txt")
 
 #call results table for Jenkins v. Coulter
 deseq2.JenkCoultres<- results (deseq2.dds, contrast = c("condition", "Coulter", "Jenkins"))
@@ -54,5 +54,6 @@ write.table(sig, file="sig.txt")
 #instal pcaExploreer
 source("https://bioconductor.org/biocLite.R")
 biocLite("pcaExplorer")
-
-pcaExplorer(dds = dds, rlt = rlt)
+library(pcaExplorer)
+?pcaExplorer
+pcaExplorer()
