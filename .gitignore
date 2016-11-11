@@ -21,3 +21,9 @@ analysis/Differential Expression/.RData
 analysis/Differential Expression/.RData
 
 analysis/Differential Expression/.RData
+
+analysis/Trinity/transcriptome2.fasta.flat
+
+analysis/Trinity/transcriptome2.fasta.gdx
+
+*.h5

@@ -1,9 +1,9 @@
 {
-	"n_targets": 138481,
+	"n_targets": 356147,
 	"n_bootstraps": 0,
 	"n_processed": 22845037,
 	"kallisto_version": "0.43.0",
 	"index_version": 10,
-	"start_time": "Fri Nov  4 14:04:57 2016",
-	"call": "./scripts/kallisto/kallisto quant -i ./analysis/kallisto/transcriptome1 -o ./analysis/Counts/V/ -t 4 ./data_raw/V.1_val_1.fq.gz ./data_raw/V.2_val_2.fq.gz"
+	"start_time": "Tue Nov  8 14:56:51 2016",
+	"call": "./scripts/kallisto/kallisto quant -i ./analysis/kallisto/transcriptome2 -o ./analysis/Counts/V/ -t 8 ./data_raw/V.1_val_1.fq.gz ./data_raw/V.2_val_2.fq.gz"
 }
