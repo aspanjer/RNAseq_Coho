@@ -15,19 +15,15 @@ deseq2.dds <- DESeqDataSetFromMatrix(countData = data,
 deseq2.dds <- DESeq(deseq2.dds)
 #call results table for Issaquah v. Coulter
 deseq2.IssCoulterres <- results(deseq2.dds, contrast= c("condition", "Issaquah", "Coulter"))
-summary(deseq2.IssCoulterres)
-deseq2.IssCoultsig<-deseq2.IssCoulterres[!is.na(deseq2.IssCoulterres$padj) & deseq2.IssCoulterres$padj <= 0.05,]
 write.table(deseq2.IssCoultsig, file="ISvCO.txt")
 
 #call results table for Jenkins v. Coulter
 deseq2.JenkCoultres<- results (deseq2.dds, contrast = c("condition", "Coulter", "Jenkins"))
-deseq2.JenkCoultres<-deseq2.res[order(rownames(deseq2.JenkCoultres)),]
-dim(deseq2.JenkCoultres[!is.na(deseq2.JenkCoultres$padj) & deseq2.JenkCoultres$padj <= 0.05,])
+write.table(deseq2.JenkCoultres, file="JEvCO.txt")
 
 #call results table for Swamp v Coulter
 deseq2.SwampCoultres<-results(deseq2.dds, contrast = c("condition", "Coulter", "Swamp"))
-deseq2.SwampCoultres<-deseq2.SwampCoultres[order(rownames(deseq2.SwampCoultres)),]
-dim(deseq2.SwampCoultres[!is.na(deseq2.SwampCoultres$padj) & deseq2.SwampCoultres$padj <=0.05,])
+write.table(deseq2.SwampCoultres, file="SWvCO.txt")
 
 head(deseq2.res, n=30)
 
