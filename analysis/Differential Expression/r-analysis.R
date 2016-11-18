@@ -124,6 +124,20 @@ mat.JE<-mat.JE[-1,]
 df.JE<- as.data.frame(colData(rld.JE)[,c("condition","type") ])
 pheatmap(mat.JE, annotation_col=df.JE)
 
+#Heatmap for DE genes, Site-site comparison
+Issaquah.DE<-read.table(file="IssaquahDE.txt", header=F)
+Jenkins.DE<-read.table(file="JenkinsDE.txt", header=F)
+Swamp.DE<-read.table(file="SwampDE.txt", header=F)
+
+DE.mat<-cbind(Issaquah.DE[,c(1,3)],Jenkins.DE[,3],Swamp.DE[,3])
+rownames(DE.mat)<-DE.mat$V1
+write.table(DE.mat, file="edit")
+
+DE.mat<-read.table(file="edit.txt", header=TRUE)
+rownames(DE.mat)<-DE.mat$V1
+DE.mat<-DE.mat[,-1]
+pheatmap(DE.mat,fontsize_col=20, show_rownames=F, main="Log-fold change for differentially expressed genes as compared to refrence site (Coulter)")
+
 #instal pcaExploreer
 source("https://bioconductor.org/biocLite.R")
 biocLite("pcaExplorer")
