@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
-
+set -e
+set -u
+set -o pipefail
     
 #This script takes raw fastq files from multiple sequencing lanes and combines them based 
 #on common barcode identifiers. It then takes these files and renames them based on a 
