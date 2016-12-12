@@ -1,0 +1,2026 @@
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+  "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>REVIGO Output</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="styles.css" type="text/css"/>
+    <link rel="stylesheet" href="js/jQuery/ui.tabs.css" type="text/css" media="print, projection, screen"/>
+    <link rel="stylesheet" type="text/css" href="js/TermCloud/tc.css"/>
+
+    <script type="text/javascript" src="js/jQuery/jquery-1.4.1.min.js"></script>
+    <script type="text/javascript" src="js/jQuery/jquery.qtip-1.0.0-rc3.min.js"></script>
+    <script type="text/javascript" src="js/jQuery/ui.core.js"></script>
+    <script type="text/javascript" src="js/jQuery/ui.tabs.min.js"></script>
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="js/cytoscapeWeb/json2.min.js"></script>
+    <script type="text/javascript" src="js/cytoscapeWeb/AC_OETags.min.js"></script>
+    <script type="text/javascript" src="js/cytoscapeWeb/cytoscapeweb.min.js"></script>
+    <script type="text/javascript" src="js/DrasticTreemap/DrasticTreemapGApi.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        //initialize tooltips
+        $('.name').qtip({
+          position: {
+            corner: { target: 'topMiddle', tooltip: 'bottomLeft' }
+          },
+          style: {
+            name: 'cream',
+            padding: '7px 13px',
+            width: { max: 300, min: 0 },
+            tip: true
+          }
+        });
+        $('.bottomTip').qtip({
+          position: {
+            corner: { target: 'bottomMiddle', tooltip: 'topRight' }
+          },
+          style: {
+            name: 'cream',
+            padding: '7px 13px',
+            width: { max: 300, min: 0 },
+            tip: true
+          }
+        });
+        // initialize tabs
+        $('#container-1 ul').tabs();
+      });
+
+      function toggleFade(noOfFragment){
+        if ($('#fragment-'+noOfFragment+' .subtle:hidden, #fragment-'+noOfFragment+' .altsubtle:hidden').length==0)
+            $('#fragment-'+noOfFragment+' .subtle, #fragment-'+noOfFragment+' .altsubtle').fadeOut('slow');
+        else
+            $('#fragment-'+noOfFragment+' .subtle, #fragment-'+noOfFragment+' .altsubtle').fadeIn('slow');
+      }
+    </script>
+  </head>
+
+
+  <body>
+    <a href="/"><img src="gfx/revigo_logo_transparent_small_2.png" alt="revigo logo" width="252" height="50" /></a>
+    <p />
+
+    
+
+    
+    
+    
+
+<div id="container-1">
+      
+      <ul>
+        
+        <li><a href="#fragment-1">
+            <span>Biological Process (15)</span>
+          </a></li>
+        
+        <li><a href="#fragment-2">
+            <span>Cellular Component (5)</span>
+          </a></li>
+        
+        <li><a href="#fragment-3">
+            <span>Molecular Function (9)</span>
+          </a></li>
+        
+        
+        <li><a href="#fragment-4"> <span>Tag Clouds</span> </a></li>
+      </ul>
+      
+      
+
+
+    
+    <div id="fragment-1">
+        
+        <div id="container-1-1">
+            <ul>
+                <li><a href="#fragment-1a"><span>Scatterplot & Table</span></a></li>
+                <li><a href="#fragment-1b"><span>Interactive Graph</span></a></li>
+                <li><a href="#fragment-1c"><span>TreeMap</span></a></li>
+            </ul>
+        </div>
+
+        <div id="fragment-1a">
+
+        
+
+        
+
+        <script type="text/javascript">
+          google.load('visualization', '1', {'packages':['motionchart']});
+          google.setOnLoadCallback(drawChart);
+          function drawChart() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'GO Term');
+            data.addColumn('number', 'Date');
+            data.addColumn('number', 'semantic space X');
+            data.addColumn('number', 'semantic space Y');
+            data.addColumn('number', 'uniqueness');
+            data.addColumn('number', 'log size');
+            
+            data.addRows([
+              
+                        [ 'gene expression', 1,
+                        -4.783401763090521, 3.060566503074709,
+                        0.7675461277340031,
+                        6.919558637500989,
+                        
+                    ]
+                    
+               , 
+                        [ 'osteoblast differentiation', 1,
+                        -3.1974753603358037, -4.367937097237075,
+                        0.8244713233725864,
+                        3.8062478271957905,
+                        
+                    ]
+                    
+               , 
+                        [ 'mRNA transport', 1,
+                        5.373958673656388, 3.639172675525605,
+                        0.7487165653417386,
+                        4.421735511322255,
+                        
+                    ]
+                    
+               , 
+                        [ 'transport', 1,
+                        5.690017711515754, 2.0469472776261566,
+                        0.7887030174916988,
+                        6.936880475953195,
+                        
+                    ]
+                    
+               , 
+                        [ 'vitamin D metabolism', 1,
+                        0.28693021817453096, -6.320755773567119,
+                        0.6924955898788718,
+                        2.722633922533812,
+                        
+                    ]
+                    
+               , 
+                        [ 'oxidation-reduction process', 1,
+                        -5.842060224313061, -1.4450515151542462,
+                        0.8270569756194905,
+                        6.874152986243085,
+                        
+                    ]
+                    
+               , 
+                        [ 'B cell chemotaxis', 1,
+                        5.307644771866995, -1.845339339268008,
+                        0.6772346312121377,
+                        1.9444826721501687,
+                        
+                    ]
+                    
+               , 
+                        [ 'maturation of SSU-rRNA', 1,
+                        -1.679078169409942, 6.635464223906612,
+                        0.69856170651241,
+                        2.7193312869837265,
+                        
+                    ]
+                    
+               , 
+                        [ 'response to vitamin D', 1,
+                        4.932781433009819, -4.1570994217601385,
+                        0.7867705117728411,
+                        2.7867514221455614,
+                        
+                    ]
+                    
+               , 
+                        [ 'positive regulation of protein localization to nucleus', 1,
+                        4.9753176089094, 4.58899082978247,
+                        0.6093079926368152,
+                        3.3805730030668872,
+                        
+                    ]
+                    
+               , 
+                        [ 'RNA splicing', 1,
+                        -2.757938953395697, 5.488629259130805,
+                        0.6609305524909849,
+                        4.683479315462896,
+                        
+                    ]
+                    
+              
+              ]);
+
+            var chart = new google.visualization.MotionChart(document.getElementById('chart_div-1'));
+            var options = {};
+            options['width'] = 1000;
+            options['height'] = 800;
+            options['showXScalePicker'] = false;
+            options['showYScalePicker'] = false;
+            options['showChartButtons'] = false;
+            options['showXMetricPicker'] = true;
+            options['showYMetricPicker'] = true;
+            options['showAdvancedPanel'] = false;
+
+            
+
+            options['state'] = '{"duration":{"multiplier":1,"timeUnit":"none"},"time":"notime","nonSelectedAlpha":0.8,"showTrails":false,"iconKeySettings":[{"key":{"dim0":"osteoblast differentiation"}},{"key":{"dim0":"mRNA transport"}},{"key":{"dim0":"maturation of SSU-rRNA"}},{"key":{"dim0":"response to vitamin D"}}]}';
+
+            chart.draw(data, options);
+          }
+        </script>
+        <div id="chart_div-1" class="chartdiv"></div>
+        <div style="position: absolute; background-color: white; top: 915px; left: 120px; width: 500px; padding-top: 7px; padding-bottom: 7px; color: gray">click empty space and and drag to zoom</div>
+        <div style="position: absolute; background-color: white; top: 915px; left: 600px; width: 250px; padding-top: 7px; padding-bottom: 7px; color: gray"
+             class="bottomTip" title="The axes have no intrinsic meaning - REVIGO uses multi-dimensional scaling to reduce the dimensionality of a matrix of the GO terms' pairwise semantic similarities. The resulting projection may be highly non-linear; 
+             the guiding principle is that semantically similar GO terms should remain close together in the plot.
+             Repeated runs of REVIGO may yield different arrangements, but the terms' distances will remain similar." >interpretation of the coordinate axes?</div>
+
+        
+
+        
+        <div style="background-color:#FFDDFF; border-color:#990000; border-style: solid; border-width:1px; margin: 5px; margin-bottom: 15px; padding: 5px; width: 900px">
+          <span style="color:#990000">While parsing your data, warning(s) were encountered:</span> <br>
+          Could not parse GO ID from line: 'Term'. Line will be skipped.<br>
+
+        </div>
+        
+
+        
+
+        
+
+        
+
+        
+
+
+        
+        <form name="resubmitToRevigo_1" action="revigo.jsp" method="POST">
+
+        <table>
+          <tr style="background-color: transparent; background-image: none">
+            <td colspan="2"><img src="gfx/eye_icon.png" width="21" height="20"> <a href="#" onclick="javascript:toggleFade(1);return false;">Hide/show dispensable GO terms</a></td>
+            <td colspan="4" align="right">
+              <img src="gfx/csv.png" width="23" height="20" style="margin-left: 12px; margin-right: 4px"><a href="export.jsp?table=1">Export results to text table (CSV)</a>
+              <img src="gfx/R_icon_smaller.png" width="23" height="18" style="margin-left: 20px; margin-right: 4px"><a href="toR.jsp?table=1"> Make R script for plotting</a></td>
+          </tr>
+          <tr style="background-image:url('gfx/bluish_gradient2.png')">
+            <td>term ID</td>
+            <td>description</td>
+            <td class="name" title="The proportion of this GO term in the underlying protein annotation database (by default, whole UniProt, but the user can select a single-species subset). Higher frequency implies more general terms, lower - more specific ones.">frequency</td>
+            <td class="name" title="Use this to ensure that the term gets chosen as the cluster representative.">pin?</td>
+            
+            <td class="name" title="Measures whether the term is an outlier when compared semantically to the whole list. Calculated as 1-(average semantic similarity of a term to all other terms). More unique terms tend to be less dispensable." >uniqueness</td>
+            <td class="name" title="The semantic similarity threshold at which the term was removed from the list and assigned to a cluster. Cluster representatives always have dispensability less than the user-specified 'allowed similarity' cutoff." >dispensability</td>
+            
+          </tr>
+
+          
+          <tr class="" >
+              <td>
+              <a href="http://www.ebi.ac.uk/QuickGO/GTerm?id=GO:0001649" >GO:0001649</a> </td>
+            <td class="name" title="The process whereby a relatively unspecialized cell acquires the specialized features of an osteoblast, a mesodermal or neural crest cell that gives rise to bone." width="500"> osteoblast differentiation </td>
+            
+            <td> 0.013 %</td>
+            <td>
+
+            </td>
+
+
+
+            <td> 0.82</td>
+            <td> 0.00</td>
+            
+          </tr>
+          
+          <tr class="alt" >
+              <td>
+              <a href="http://www.ebi.ac.uk/QuickGO/GTerm?id=GO:0033280" >GO:0033280</a> </td>
+            <td class="name" title="Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a vitamin D stimulus." width="500"> response to vitamin D </td>
+            
+            <td> 0.001 %</td>
+            <td>
+
+            </td>
+
+
+
+            <td> 0.79</td>
+            <td> 0.00</td>
+            
+          </tr>
+          
+          <tr class="" >
+              <td>
+              <a href="http://www.ebi.ac.uk/QuickGO/GTerm?id=GO:0051028" >GO:0051028</a> </td>
+            <td class="name" title="The directed movement of mRNA, messenger ribonucleic acid, into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." width="500"> mRNA transport </td>
+            
+            <td> 0.053 %</td>
+            <td>
+
+            </td>
+
+
+
+            <td> 0.75</td>
+            <td> 0.00</td>
+            
+          </tr>
+          
+          <tr class="alt" >
+              <td>
+              <a href="http://www.ebi.ac.uk/QuickGO/GTerm?id=GO:0030490" >GO:0030490</a> </td>
+            <td class="name" title="Any process involved in the maturation of a precursor Small SubUnit (SSU) ribosomal RNA (rRNA) molecule into a mature SSU-rRNA molecule." width="500"> maturation of SSU-rRNA </td>
+            
+            <td> 0.001 %</td>
+            <td>
+
+            </td>
+
+
+
+            <td> 0.70</td>
+            <td> 0.01</td>
+            
+          </tr>
+          
+          <tr class="" >
+              <td>
+              <a href="http://www.ebi.ac.uk/QuickGO/GTerm?id=GO:0042359" >GO:0042359</a> </td>
+            <td class="name" title="The chemical reactions and pathways involving vitamin D, any of a group of related, fat-soluble compounds that are derived from delta-5,7 steroids and play a central role in calcium metabolism. Specific forms of vitamin D include calciferol (ergocalciferol; vitamin D2) and cholecalciferol (calciol; vitamin D3)." width="500"> vitamin D metabolic process </td>
+            
+            <td> 0.001 %</td>
+            <td>
+
+            </td>
+
+
+
+            <td> 0.69</td>
+            <td> 0.06</td>
+            
+          </tr>
+          
+          <tr class="alt subtle" >
+              <td class="branch2">
+              <a href="http://www.ebi.ac.uk/QuickGO/GTerm?id=GO:0042369" >GO:0042369</a> </td>
+            <td class="name" title="The chemical reactions and pathways resulting in the breakdown of vitamin D, any of a group of related, fat-soluble compounds that are derived from delta-5,7 steroids and play a central role in calcium metabolism. Specific forms of vitamin D include calciferol (ergocalciferol; vitamin D2) and cholecalciferol (calciol; vitamin D3)." width="500"> vitamin D catabolic process </td>
+            
+            <td> 0.000 %</td>
+            <td>
+
+                <input type="image" name="resubmit_42369" src="gfx/unpinned.png" alt="unpinned"/>
+
+            </td>
+
+
+
+            <td> 0.69</td>
+            <td> 0.86</td>
+            
+          </tr>
+          
+          <tr class="" >
+              <td>
+              <a href="http://www.ebi.ac.uk/QuickGO/GTerm?id=GO:0055114" >GO:0055114</a> </td>
+            <td class="name" title="A metabolic process that results in the removal or addition of one or more electrons to or from a substance, with or without the concomitant removal or addition of a proton or protons." width="500"> oxidation-reduction process </td>
+            
+            <td>15.044 %</td>
+            <td>
+
+            </td>
+
+
+
+            <td> 0.83</td>
+            <td> 0.08</td>
+            
+          </tr>
+          
+          <tr class="alt" >
+              <td>
+              <a href="http://www.ebi.ac.uk/QuickGO/GTerm?id=GO:0010467" >GO:0010467</a> </td>
+            <td class="name" title="The process in which a gene's sequence is converted into a mature gene product or products (proteins or RNA). This includes the production of an RNA transcript as well as any processing to produce a mature RNA product or an mRNA (for protein-coding genes) and the translation of that mRNA into protein. Protein maturation is included when required to form an active form of a product from an inactive precursor form." width="500"> gene expression </td>
+            
+            <td>16.702 %</td>
+            <td>
+
+            </td>
+
+
+
+            <td> 0.77</td>
+            <td> 0.11</td>
+            
+          </tr>
+          
+          <tr class="" >
+              <td>
+              <a href="http://www.ebi.ac.uk/QuickGO/GTerm?id=GO:0006810" >GO:0006810</a> </td>
+            <td class="name" title="The directed movement of substances (such as macromolecules, small molecules, ions) into, out of or within a cell, or between cells, or within a multicellular organism by means of some agent such as a transporter or pore." width="500"> transport </td>
+            
+            <td>17.382 %</td>
+            <td>
+
+            </td>
+
+
+
+            <td> 0.79</td>
+            <td> 0.31</td>
+            
+          </tr>
+          
+          <tr class="alt" >
+              <td>
+              <a href="http://www.ebi.ac.uk/QuickGO/GTerm?id=GO:0035754" >GO:0035754</a> </td>
+            <td class="name" title="The directed movement of a B cell guided by a specific chemical concentration gradient. Movement may be towards a higher concentration (positive chemotaxis) or towards a lower concentration (negative chemotaxis)." width="500"> B cell chemotaxis </td>
+            
+            <td> 0.000 %</td>
+            <td>
+
+            </td>
+
+
+
+            <td> 0.68</td>
+            <td> 0.34</td>
+            
+          </tr>
+          
+          <tr class="" >
+              <td>
+              <a href="http://www.ebi.ac.uk/QuickGO/GTerm?id=GO:0008380" >GO:0008380</a> </td>
+            <td class="name" title="The process of removing sections of the primary RNA transcript to remove sequences not present in the mature form of the RNA and joining the remaining sections to form the mature form of the RNA." width="500"> RNA splicing </td>
+            
+            <td> 0.097 %</td>
+            <td>
+
+            </td>
+
+
+
+            <td> 0.66</td>
+            <td> 0.38</td>
+            
+          </tr>
+          
+          <tr class="alt subtle" >
+              <td class="branch2">
+              <a href="http://www.ebi.ac.uk/QuickGO/GTerm?id=GO:0006397" >GO:0006397</a> </td>
+            <td class="name" title="Any process involved in the conversion of a primary mRNA transcript into one or more mature mRNA(s) prior to translation into polypeptide." width="500"> mRNA processing </td>
+            
+            <td> 0.373 %</td>
+            <td>
+
+                <input type="image" name="resubmit_6397" src="gfx/unpinned.png" alt="unpinned"/>
+
+            </td>
+
+
+
+            <td> 0.65</td>
+            <td> 0.56</td>
+            
+          </tr>
+          
+          <tr class="" >
+              <td>
+              <a href="http://www.ebi.ac.uk/QuickGO/GTerm?id=GO:1900182" >GO:1900182</a> </td>
+            <td class="name" title="Any process that activates or increases the frequency, rate or extent of protein localization to nucleus." width="500"> positive regulation of protein localization to nucleus </td>
+            
+            <td> 0.005 %</td>
+            <td>
+
+            </td>
+
+
+
+            <td> 0.61</td>
+            <td> 0.44</td>
+            
+          </tr>
+          
+          <tr class="alt subtle" >
+              <td class="branch1">
+              <a href="http://www.ebi.ac.uk/QuickGO/GTerm?id=GO:0006956" >GO:0006956</a> </td>
+            <td class="name" title="Any process involved in the activation of any of the steps of the complement cascade, which allows for the direct killing of microbes, the disposal of immune complexes, and the regulation of other immune processes; the initial steps of complement activation involve one of three pathways, the classical pathway, the alternative pathway, and the lectin pathway, all of which lead to the terminal complement pathway." width="500"> complement activation </td>
+            
+            <td> 0.069 %</td>
+            <td>
+
+                <input type="image" name="resubmit_6956" src="gfx/unpinned.png" alt="unpinned"/>
+
+            </td>
+
+
+
+            <td> 0.54</td>
+            <td> 0.66</td>
+            
+          </tr>
+          
+          <tr class=" subtle" >
+              <td class="branch2">
+              <a href="http://www.ebi.ac.uk/QuickGO/GTerm?id=GO:0045727" >GO:0045727</a> </td>
+            <td class="name" title="Any process that activates or increases the frequency, rate or extent of the chemical reactions and pathways resulting in the formation of proteins by the translation of mRNA." width="500"> positive regulation of translation </td>
+            
+            <td> 0.047 %</td>
+            <td>
+
+                <input type="image" name="resubmit_45727" src="gfx/unpinned.png" alt="unpinned"/>
+
+            </td>
+
+
+
+            <td> 0.60</td>
+            <td> 0.62</td>
+            
+          </tr>
+          
+        </table>
+        </form>
+        </div>
+        
+
+
+        
+        <div id="fragment-1b">
+        
+
+        <div style="width: 926px;">
+            <div style="float:left; display: inline;">
+                 <a href="cytoscape/cytoscape.jsp?filename=b36e4741f2d5a6360576d1ee2cce763516870793392268.xgmml">Run Cytoscape in Java web start</a>
+            </div>
+            <div style="float: right; display: inline;">
+                <a class="bottomTip" title="To open this file, download and install Cytoscape, and then go to menu File - Import - Network (multiple file Types). Afterwards, you will probably want to run a layout algorithm in Cytoscape to enhance the visualization." href="download.jsp?filename=b36e4741f2d5a6360576d1ee2cce763516870793392268.xgmml">Download Cytoscape XGMML file for offline use</a>
+            </div>
+        </div><br/>
+        <div id="cytoscapeweb_1" class="cytoscapeweb">
+            Cytoscape Web will replace the contents of this div with your graph.
+        </div>
+
+        </div>
+        
+
+
+        
+        <div id="fragment-1c">
+      
+
+        <script type="text/javascript">
+          google.load("visualization", "1");
+          google.load("swfobject", "2.2");
+
+          // Set callback to run when API is loaded
+          google.setOnLoadCallback(drawVisualization);
+
+          // Called when the Visualization API is loaded.
+          function drawVisualization() {
+
+            var data;
+            var vis;
+
+            
+
+              // Create and populate a data table.
+              data = new google.visualization.DataTable();
+              data.addColumn('string', 'GO Term');
+              data.addColumn('string', 'Representative');
+              data.addColumn('number', 'uniqueness');
+              data.addColumn('number', 'size');
+              data.addRows([
+                
+                       [ 'osteoblast\ndifferentiation',
+                         'osteoblast\ndifferentiation',
+                         82,
+                         4 ] , 
+                
+                       [ 'response\nto\nvitamin\nD',
+                         'response\nto\nvitamin\nD',
+                         78,
+                         3 ] , 
+                
+                       [ 'B\ncell\nchemotaxis',
+                         'response\nto\nvitamin\nD',
+                         67,
+                         2 ] , 
+                
+                       [ 'mRNA\ntransport',
+                         'mRNA\ntransport',
+                         74,
+                         4 ] , 
+                
+                       [ 'transport',
+                         'mRNA\ntransport',
+                         78,
+                         7 ] , 
+                
+                       [ 'positive\nregulation\nof protein\nlocalization\nto\nnucleus',
+                         'mRNA\ntransport',
+                         60,
+                         3 ] , 
+                
+                       [ 'maturation\nof SSU-rRNA',
+                         'maturation\nof SSU-rRNA',
+                         69,
+                         3 ] , 
+                
+                       [ 'gene\nexpression',
+                         'maturation\nof SSU-rRNA',
+                         76,
+                         7 ] , 
+                
+                       [ 'RNA\nsplicing',
+                         'maturation\nof SSU-rRNA',
+                         66,
+                         5 ] , 
+                
+                       [ 'vitamin\nD\nmetabolism',
+                         'vitamin\nD\nmetabolism',
+                         69,
+                         3 ] , 
+                
+                       [ 'oxidation-reduction\nprocess',
+                         'oxidation-reduction\nprocess',
+                         82,
+                         7 ] 
+                
+              ]);
+
+              // Instantiate our object.
+              vis = new drasticdata.DrasticTreemap(document.getElementById('treemap_BIOLOGICAL_PROCESS'));
+              // Draw the treemap with the data we created locally and some options:
+              vis.draw(data, { groupbycol: "Representative", labelcol: "GO Term", variables: ['uniqueness', 'size'] } );
+
+          } // end function drawVisualization()
+
+        </script>
+        <div id="treemap_BIOLOGICAL_PROCESS" style="width:1050px; height:500px;"></div>
+        <div><img src="gfx/csv.png" width="23" height="20" style="margin-left: 12px; margin-right: 4px"><a href="export_treemap.jsp?table=1">Export data to text table (CSV)</a>
+        <img src="gfx/R_icon_smaller.png" width="23" height="18" style="margin-left: 20px; margin-right: 4px"><a href="toR_treemap.jsp?table=1"> Make R script for plotting treemaps</a></div>
+        </div>
+        
+    </div>
+    
+
+
+    
+    <div id="fragment-2">
+        
+        <div id="container-2-1">
+            <ul>
+                <li><a href="#fragment-2a"><span>Scatterplot & Table</span></a></li>
+                <li><a href="#fragment-2b"><span>Interactive Graph</span></a></li>
+                <li><a href="#fragment-2c"><span>TreeMap</span></a></li>
+            </ul>
+        </div>
+
+        <div id="fragment-2a">
+
+        
+
+        
+
+        <script type="text/javascript">
+          google.load('visualization', '1', {'packages':['motionchart']});
+          google.setOnLoadCallback(drawChart);
+          function drawChart() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'GO Term');
+            data.addColumn('number', 'Date');
+            data.addColumn('number', 'semantic space X');
+            data.addColumn('number', 'semantic space Y');
+            data.addColumn('number', 'uniqueness');
+            data.addColumn('number', 'log size');
+            
+            data.addRows([
+              
+                        [ 'perinuclear region of cytoplasm', 1,
+                        -0.6061847789375063, -6.577578380783217,
+                        0.5068189551664819,
+                        4.06725688923815,
+                        
+                    ]
+                    
+               , 
+                        [ 'aggresome', 1,
+                        -5.362950573626162, -0.27921243998646805,
+                        0.5136602967376974,
+                        2.8068580295188172,
+                        
+                    ]
+                    
+               , 
+                        [ 'extracellular exosome', 1,
+                        5.823676330316539, 0.8434178376957832,
+                        0.4344889353368174,
+                        4.847609671299165,
+                        
+                    ]
+                    
+               , 
+                        [ 'plasma membrane', 1,
+                        -0.8419921030982576, 6.190499211816144,
+                        0.5780280655788246,
+                        6.5149280917839505,
+                        
+                    ]
+                    
+               , 
+                        [ 'nucleoplasm', 1,
+                        5.857500204993087, -0.9880174575802634,
+                        0.3819933956499415,
+                        4.715677500566942,
+                        
+                    ]
+                    
+              
+              ]);
+
+            var chart = new google.visualization.MotionChart(document.getElementById('chart_div-2'));
+            var options = {};
+            options['width'] = 1000;
+            options['height'] = 800;
+            options['showXScalePicker'] = false;
+            options['showYScalePicker'] = false;
+            options['showChartButtons'] = false;
+            options['showXMetricPicker'] = true;
+            options['showYMetricPicker'] = true;
+            options['showAdvancedPanel'] = false;
+
+            
+
+            options['state'] = '{"duration":{"multiplier":1,"timeUnit":"none"},"time":"notime","nonSelectedAlpha":0.8,"showTrails":false,"iconKeySettings":[{"key":{"dim0":"aggresome"}},{"key":{"dim0":"extracellular exosome"}},{"key":{"dim0":"plasma membrane"}}]}';
+
+            chart.draw(data, options);
+          }
+        </script>
+        <div id="chart_div-2" class="chartdiv"></div>
+        <div style="position: absolute; background-color: white; top: 915px; left: 120px; width: 500px; padding-top: 7px; padding-bottom: 7px; color: gray">click empty space and and drag to zoom</div>
+        <div style="position: absolute; background-color: white; top: 915px; left: 600px; width: 250px; padding-top: 7px; padding-bottom: 7px; color: gray"
+             class="bottomTip" title="The axes have no intrinsic meaning - REVIGO uses multi-dimensional scaling to reduce the dimensionality of a matrix of the GO terms' pairwise semantic similarities. The resulting projection may be highly non-linear; 
+             the guiding principle is that semantically similar GO terms should remain close together in the plot.
+             Repeated runs of REVIGO may yield different arrangements, but the terms' distances will remain similar." >interpretation of the coordinate axes?</div>
+
+        
+
+        
+        <div style="background-color:#FFDDFF; border-color:#990000; border-style: solid; border-width:1px; margin: 5px; margin-bottom: 15px; padding: 5px; width: 900px">
+          <span style="color:#990000">While parsing your data, warning(s) were encountered:</span> <br>
+          Could not parse GO ID from line: 'Term'. Line will be skipped.<br>
+
+        </div>
+        
+
+        
+
+        
+
+        
+
+        
+
+
+        
+        <form name="resubmitToRevigo_2" action="revigo.jsp" method="POST">
+
+        <table>
+          <tr style="background-color: transparent; background-image: none">
+            <td colspan="2"><img src="gfx/eye_icon.png" width="21" height="20"> <a href="#" onclick="javascript:toggleFade(2);return false;">Hide/show dispensable GO terms</a></td>
+            <td colspan="4" align="right">
+              <img src="gfx/csv.png" width="23" height="20" style="margin-left: 12px; margin-right: 4px"><a href="export.jsp?table=2">Export results to text table (CSV)</a>
+              <img src="gfx/R_icon_smaller.png" width="23" height="18" style="margin-left: 20px; margin-right: 4px"><a href="toR.jsp?table=2"> Make R script for plotting</a></td>
+          </tr>
+          <tr style="background-image:url('gfx/bluish_gradient2.png')">
+            <td>term ID</td>
+            <td>description</td>
+            <td class="name" title="The proportion of this GO term in the underlying protein annotation database (by default, whole UniProt, but the user can select a single-species subset). Higher frequency implies more general terms, lower - more specific ones.">frequency</td>
+            <td class="name" title="Use this to ensure that the term gets chosen as the cluster representative.">pin?</td>
+            
+            <td class="name" title="Measures whether the term is an outlier when compared semantically to the whole list. Calculated as 1-(average semantic similarity of a term to all other terms). More unique terms tend to be less dispensable." >uniqueness</td>
+            <td class="name" title="The semantic similarity threshold at which the term was removed from the list and assigned to a cluster. Cluster representatives always have dispensability less than the user-specified 'allowed similarity' cutoff." >dispensability</td>
+            
+          </tr>
+
+          
+          <tr class="" >
+              <td>
+              <a href="http://www.ebi.ac.uk/QuickGO/GTerm?id=GO:0016235" >GO:0016235</a> </td>
+            <td class="name" title="An inclusion body formed by dynein-dependent retrograde transport of an aggregated protein on microtubules." width="500"> aggresome </td>
+            
+            <td> 0.003 %</td>
+            <td>
+
+            </td>
+
+
+
+            <td> 0.51</td>
+            <td> 0.00</td>
+            
+          </tr>
+          
+          <tr class="alt" >
+              <td>
+              <a href="http://www.ebi.ac.uk/QuickGO/GTerm?id=GO:0070062" >GO:0070062</a> </td>
+            <td class="name" title="A membrane-bounded vesicle that is released into the extracellular region by fusion of the limiting endosomal membrane of a multivesicular body with the plasma membrane. Extracellular exosomes, also simply called exosomes, have a diameter of about 40-100 nm." width="500"> extracellular exosome </td>
+            
+            <td> 0.300 %</td>
+            <td>
+
+            </td>
+
+
+
+            <td> 0.43</td>
+            <td> 0.00</td>
+            
+          </tr>
+          
+          <tr class="" >
+              <td>
+              <a href="http://www.ebi.ac.uk/QuickGO/GTerm?id=GO:0005886" >GO:0005886</a> </td>
+            <td class="name" title="The membrane surrounding a cell that separates the cell from its external environment. It consists of a phospholipid bilayer and associated proteins." width="500"> plasma membrane </td>
+            
+            <td>13.934 %</td>
+            <td>
+
+            </td>
+
+
+
+            <td> 0.58</td>
+            <td> 0.03</td>
+            
+          </tr>
+          
+          <tr class="alt" >
+              <td>
+              <a href="http://www.ebi.ac.uk/QuickGO/GTerm?id=GO:0048471" >GO:0048471</a> </td>
+            <td class="name" title="Cytoplasm situated near, or occurring around, the nucleus." width="500"> perinuclear region of cytoplasm </td>
+            
+            <td> 0.050 %</td>
+            <td>
+
+            </td>
+
+
+
+            <td> 0.51</td>
+            <td> 0.05</td>
+            
+          </tr>
+          
+          <tr class="" >
+              <td>
+              <a href="http://www.ebi.ac.uk/QuickGO/GTerm?id=GO:0005654" >GO:0005654</a> </td>
+            <td class="name" title="That part of the nuclear content other than the chromosomes or the nucleolus." width="500"> nucleoplasm </td>
+            
+            <td> 0.221 %</td>
+            <td>
+
+            </td>
+
+
+
+            <td> 0.38</td>
+            <td> 0.37</td>
+            
+          </tr>
+          
+        </table>
+        </form>
+        </div>
+        
+
+
+        
+        <div id="fragment-2b">
+        
+
+        <div style="width: 926px;">
+            <div style="float:left; display: inline;">
+                 <a href="cytoscape/cytoscape.jsp?filename=b36e4741f2d5a6360576d1ee2cce6033660398405562849.xgmml">Run Cytoscape in Java web start</a>
+            </div>
+            <div style="float: right; display: inline;">
+                <a class="bottomTip" title="To open this file, download and install Cytoscape, and then go to menu File - Import - Network (multiple file Types). Afterwards, you will probably want to run a layout algorithm in Cytoscape to enhance the visualization." href="download.jsp?filename=b36e4741f2d5a6360576d1ee2cce6033660398405562849.xgmml">Download Cytoscape XGMML file for offline use</a>
+            </div>
+        </div><br/>
+        <div id="cytoscapeweb_2" class="cytoscapeweb">
+            Cytoscape Web will replace the contents of this div with your graph.
+        </div>
+
+        </div>
+        
+
+
+        
+        <div id="fragment-2c">
+      
+
+        <script type="text/javascript">
+          google.load("visualization", "1");
+          google.load("swfobject", "2.2");
+
+          // Set callback to run when API is loaded
+          google.setOnLoadCallback(drawVisualization);
+
+          // Called when the Visualization API is loaded.
+          function drawVisualization() {
+
+            var data;
+            var vis;
+
+            
+
+              // Create and populate a data table.
+              data = new google.visualization.DataTable();
+              data.addColumn('string', 'GO Term');
+              data.addColumn('string', 'Representative');
+              data.addColumn('number', 'uniqueness');
+              data.addColumn('number', 'size');
+              data.addRows([
+                
+                       [ 'aggresome',
+                         'aggresome',
+                         51,
+                         3 ] , 
+                
+                       [ 'extracellular\nexosome',
+                         'extracellular\nexosome',
+                         43,
+                         5 ] , 
+                
+                       [ 'nucleoplasm',
+                         'extracellular\nexosome',
+                         38,
+                         5 ] , 
+                
+                       [ 'plasma\nmembrane',
+                         'plasma\nmembrane',
+                         57,
+                         7 ] , 
+                
+                       [ 'perinuclear\nregion\nof cytoplasm',
+                         'perinuclear\nregion\nof cytoplasm',
+                         50,
+                         4 ] 
+                
+              ]);
+
+              // Instantiate our object.
+              vis = new drasticdata.DrasticTreemap(document.getElementById('treemap_CELLULAR_COMPONENT'));
+              // Draw the treemap with the data we created locally and some options:
+              vis.draw(data, { groupbycol: "Representative", labelcol: "GO Term", variables: ['uniqueness', 'size'] } );
+
+          } // end function drawVisualization()
+
+        </script>
+        <div id="treemap_CELLULAR_COMPONENT" style="width:1050px; height:500px;"></div>
+        <div><img src="gfx/csv.png" width="23" height="20" style="margin-left: 12px; margin-right: 4px"><a href="export_treemap.jsp?table=2">Export data to text table (CSV)</a>
+        <img src="gfx/R_icon_smaller.png" width="23" height="18" style="margin-left: 20px; margin-right: 4px"><a href="toR_treemap.jsp?table=2"> Make R script for plotting treemaps</a></div>
+        </div>
+        
+    </div>
+    
+
+
+    
+    <div id="fragment-3">
+        
+        <div id="container-3-1">
+            <ul>
+                <li><a href="#fragment-3a"><span>Scatterplot & Table</span></a></li>
+                <li><a href="#fragment-3b"><span>Interactive Graph</span></a></li>
+                <li><a href="#fragment-3c"><span>TreeMap</span></a></li>
+            </ul>
+        </div>
+
+        <div id="fragment-3a">
+
+        
+
+        
+
+        <script type="text/javascript">
+          google.load('visualization', '1', {'packages':['motionchart']});
+          google.setOnLoadCallback(drawChart);
+          function drawChart() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'GO Term');
+            data.addColumn('number', 'Date');
+            data.addColumn('number', 'semantic space X');
+            data.addColumn('number', 'semantic space Y');
+            data.addColumn('number', 'uniqueness');
+            data.addColumn('number', 'log size');
+            
+            data.addRows([
+              
+                        [ '25-hydroxycholecalciferol-24-hydroxylase activity', 1,
+                        3.157891815679881, -5.226749225974301,
+                        0.5442387538358348,
+                        1.5797835966168101,
+                        
+                    ]
+                    
+               , 
+                        [ 'drug binding', 1,
+                        -3.8285229962017278, 5.2954025004020995,
+                        0.7254462553438265,
+                        5.089262020940336,
+                        
+                    ]
+                    
+               , 
+                        [ 'GTP binding', 1,
+                        -5.690609288975402, -2.362570279108936,
+                        0.6880213554311616,
+                        5.903332038699959,
+                        
+                    ]
+                    
+               , 
+                        [ 'protein homodimerization activity', 1,
+                        -2.0873294520601746, -6.931894876238237,
+                        0.7272717380878253,
+                        4.76014341989789,
+                        
+                    ]
+                    
+               , 
+                        [ 'oxidoreductase activity', 1,
+                        5.378584157559137, 2.9040624667261485,
+                        0.7877129728593352,
+                        6.840896581336946,
+                        
+                    ]
+                    
+               , 
+                        [ 'poly(A) RNA binding', 1,
+                        1.2294126017099851, 5.70452363552826,
+                        0.7177609236990456,
+                        4.806356370289087,
+                        
+                    ]
+                    
+               , 
+                        [ 'iron ion binding', 1,
+                        -5.990713547967014, 0.02114692933599205,
+                        0.6975368042167637,
+                        6.067099882470024,
+                        
+                    ]
+                    
+               , 
+                        [ 'L-iditol 2-dehydrogenase activity', 1,
+                        5.2530697798974515, -2.4266514209728927,
+                        0.7045723874134081,
+                        3.1112625136590655,
+                        
+                    ]
+                    
+              
+              ]);
+
+            var chart = new google.visualization.MotionChart(document.getElementById('chart_div-3'));
+            var options = {};
+            options['width'] = 1000;
+            options['height'] = 800;
+            options['showXScalePicker'] = false;
+            options['showYScalePicker'] = false;
+            options['showChartButtons'] = false;
+            options['showXMetricPicker'] = true;
+            options['showYMetricPicker'] = true;
+            options['showAdvancedPanel'] = false;
+
+            
+
+            options['state'] = '{"duration":{"multiplier":1,"timeUnit":"none"},"time":"notime","nonSelectedAlpha":0.8,"showTrails":false,"iconKeySettings":[{"key":{"dim0":"drug binding"}},{"key":{"dim0":"protein homodimerization activity"}},{"key":{"dim0":"oxidoreductase activity"}},{"key":{"dim0":"poly(A) RNA binding"}},{"key":{"dim0":"L-iditol 2-dehydrogenase activity"}}]}';
+
+            chart.draw(data, options);
+          }
+        </script>
+        <div id="chart_div-3" class="chartdiv"></div>
+        <div style="position: absolute; background-color: white; top: 915px; left: 120px; width: 500px; padding-top: 7px; padding-bottom: 7px; color: gray">click empty space and and drag to zoom</div>
+        <div style="position: absolute; background-color: white; top: 915px; left: 600px; width: 250px; padding-top: 7px; padding-bottom: 7px; color: gray"
+             class="bottomTip" title="The axes have no intrinsic meaning - REVIGO uses multi-dimensional scaling to reduce the dimensionality of a matrix of the GO terms' pairwise semantic similarities. The resulting projection may be highly non-linear; 
+             the guiding principle is that semantically similar GO terms should remain close together in the plot.
+             Repeated runs of REVIGO may yield different arrangements, but the terms' distances will remain similar." >interpretation of the coordinate axes?</div>
+
+        
+
+        
+        <div style="background-color:#FFDDFF; border-color:#990000; border-style: solid; border-width:1px; margin: 5px; margin-bottom: 15px; padding: 5px; width: 900px">
+          <span style="color:#990000">While parsing your data, warning(s) were encountered:</span> <br>
+          Could not parse GO ID from line: 'Term'. Line will be skipped.<br>
+
+        </div>
+        
+
+        
+
+        
+
+        
+
+        
+
+
+        
+        <form name="resubmitToRevigo_3" action="revigo.jsp" method="POST">
+
+        <table>
+          <tr style="background-color: transparent; background-image: none">
+            <td colspan="2"><img src="gfx/eye_icon.png" width="21" height="20"> <a href="#" onclick="javascript:toggleFade(3);return false;">Hide/show dispensable GO terms</a></td>
+            <td colspan="4" align="right">
+              <img src="gfx/csv.png" width="23" height="20" style="margin-left: 12px; margin-right: 4px"><a href="export.jsp?table=3">Export results to text table (CSV)</a>
+              <img src="gfx/R_icon_smaller.png" width="23" height="18" style="margin-left: 20px; margin-right: 4px"><a href="toR.jsp?table=3"> Make R script for plotting</a></td>
+          </tr>
+          <tr style="background-image:url('gfx/bluish_gradient2.png')">
+            <td>term ID</td>
+            <td>description</td>
+            <td class="name" title="The proportion of this GO term in the underlying protein annotation database (by default, whole UniProt, but the user can select a single-species subset). Higher frequency implies more general terms, lower - more specific ones.">frequency</td>
+            <td class="name" title="Use this to ensure that the term gets chosen as the cluster representative.">pin?</td>
+            
+            <td class="name" title="Measures whether the term is an outlier when compared semantically to the whole list. Calculated as 1-(average semantic similarity of a term to all other terms). More unique terms tend to be less dispensable." >uniqueness</td>
+            <td class="name" title="The semantic similarity threshold at which the term was removed from the list and assigned to a cluster. Cluster representatives always have dispensability less than the user-specified 'allowed similarity' cutoff." >dispensability</td>
+            
+          </tr>
+
+          
+          <tr class="" >
+              <td>
+              <a href="http://www.ebi.ac.uk/QuickGO/GTerm?id=GO:0003939" >GO:0003939</a> </td>
+            <td class="name" title="Catalysis of the reaction: L-iditol + NAD+ = L-sorbose + NADH + H+." width="500"> L-iditol 2-dehydrogenase activity </td>
+            
+            <td> 0.003 %</td>
+            <td>
+
+            </td>
+
+
+
+            <td> 0.70</td>
+            <td> 0.00</td>
+            
+          </tr>
+          
+          <tr class="alt" >
+              <td>
+              <a href="http://www.ebi.ac.uk/QuickGO/GTerm?id=GO:0042803" >GO:0042803</a> </td>
+            <td class="name" title="Interacting selectively and non-covalently with an identical protein to form a homodimer." width="500"> protein homodimerization activity </td>
+            
+            <td> 0.122 %</td>
+            <td>
+
+            </td>
+
+
+
+            <td> 0.73</td>
+            <td> 0.00</td>
+            
+          </tr>
+          
+          <tr class="" >
+              <td>
+              <a href="http://www.ebi.ac.uk/QuickGO/GTerm?id=GO:0016491" >GO:0016491</a> </td>
+            <td class="name" title="Catalysis of an oxidation-reduction (redox) reaction, a reversible chemical reaction in which the oxidation state of an atom or atoms within a molecule is altered. One substrate acts as a hydrogen or electron donor and becomes oxidized, while the other acts as hydrogen or electron acceptor and becomes reduced." width="500"> oxidoreductase activity </td>
+            
+            <td>14.657 %</td>
+            <td>
+
+            </td>
+
+
+
+            <td> 0.79</td>
+            <td> 0.02</td>
+            
+          </tr>
+          
+          <tr class="alt" >
+              <td>
+              <a href="http://www.ebi.ac.uk/QuickGO/GTerm?id=GO:0008144" >GO:0008144</a> </td>
+            <td class="name" title="Interacting selectively and non-covalently with a drug, any naturally occurring or synthetic substance, other than a nutrient, that, when administered or applied to an organism, affects the structure or functioning of the organism; in particular, any such substance used in the diagnosis, prevention, or treatment of disease." width="500"> drug binding </td>
+            
+            <td> 0.260 %</td>
+            <td>
+
+            </td>
+
+
+
+            <td> 0.73</td>
+            <td> 0.04</td>
+            
+          </tr>
+          
+          <tr class="" >
+              <td>
+              <a href="http://www.ebi.ac.uk/QuickGO/GTerm?id=GO:0044822" >GO:0044822</a> </td>
+            <td class="name" title="Interacting non-covalently with a poly(A) RNA, a RNA molecule which has a tail of adenine bases." width="500"> poly(A) RNA binding </td>
+            
+            <td> 0.135 %</td>
+            <td>
+
+            </td>
+
+
+
+            <td> 0.72</td>
+            <td> 0.04</td>
+            
+          </tr>
+          
+          <tr class="alt" >
+              <td>
+              <a href="http://www.ebi.ac.uk/QuickGO/GTerm?id=GO:0005506" >GO:0005506</a> </td>
+            <td class="name" title="Interacting selectively and non-covalently with iron (Fe) ions." width="500"> iron ion binding </td>
+            
+            <td> 2.467 %</td>
+            <td>
+
+            </td>
+
+
+
+            <td> 0.70</td>
+            <td> 0.05</td>
+            
+          </tr>
+          
+          <tr class="" >
+              <td>
+              <a href="http://www.ebi.ac.uk/QuickGO/GTerm?id=GO:0008403" >GO:0008403</a> </td>
+            <td class="name" title="Catalysis of the hydroxylation of C-24 of 25-hydroxycholecalciferol (25-hydroxyvitamin D3) to form 24(R),25-dihydroxycholecalciferol." width="500"> 25-hydroxycholecalciferol-24-hydroxylase activity </td>
+            
+            <td> 0.000 %</td>
+            <td>
+
+            </td>
+
+
+
+            <td> 0.54</td>
+            <td> 0.13</td>
+            
+          </tr>
+          
+          <tr class="alt subtle" >
+              <td class="branch2">
+              <a href="http://www.ebi.ac.uk/QuickGO/GTerm?id=GO:0030342" >GO:0030342</a> </td>
+            <td class="name" title="Catalysis of the hydroxylation of C-24 of 1-alpha,25-hydroxycholecalciferol (25-hydroxyvitamin D3; calcitriol)." width="500"> 1-alpha,25-dihydroxyvitamin D3 24-hydroxylase activity </td>
+            
+            <td> 0.000 %</td>
+            <td>
+
+                <input type="image" name="resubmit_30342" src="gfx/unpinned.png" alt="unpinned"/>
+
+            </td>
+
+
+
+            <td> 0.54</td>
+            <td> 0.95</td>
+            
+          </tr>
+          
+          <tr class="" >
+              <td>
+              <a href="http://www.ebi.ac.uk/QuickGO/GTerm?id=GO:0005525" >GO:0005525</a> </td>
+            <td class="name" title="Interacting selectively and non-covalently with GTP, guanosine triphosphate." width="500"> GTP binding </td>
+            
+            <td> 1.692 %</td>
+            <td>
+
+            </td>
+
+
+
+            <td> 0.69</td>
+            <td> 0.19</td>
+            
+          </tr>
+          
+        </table>
+        </form>
+        </div>
+        
+
+
+        
+        <div id="fragment-3b">
+        
+
+        <div style="width: 926px;">
+            <div style="float:left; display: inline;">
+                 <a href="cytoscape/cytoscape.jsp?filename=b36e4741f2d5a6360576d1ee2cce2586480961195141380.xgmml">Run Cytoscape in Java web start</a>
+            </div>
+            <div style="float: right; display: inline;">
+                <a class="bottomTip" title="To open this file, download and install Cytoscape, and then go to menu File - Import - Network (multiple file Types). Afterwards, you will probably want to run a layout algorithm in Cytoscape to enhance the visualization." href="download.jsp?filename=b36e4741f2d5a6360576d1ee2cce2586480961195141380.xgmml">Download Cytoscape XGMML file for offline use</a>
+            </div>
+        </div><br/>
+        <div id="cytoscapeweb_3" class="cytoscapeweb">
+            Cytoscape Web will replace the contents of this div with your graph.
+        </div>
+
+        </div>
+        
+
+
+        
+        <div id="fragment-3c">
+      
+
+        <script type="text/javascript">
+          google.load("visualization", "1");
+          google.load("swfobject", "2.2");
+
+          // Set callback to run when API is loaded
+          google.setOnLoadCallback(drawVisualization);
+
+          // Called when the Visualization API is loaded.
+          function drawVisualization() {
+
+            var data;
+            var vis;
+
+            
+
+              // Create and populate a data table.
+              data = new google.visualization.DataTable();
+              data.addColumn('string', 'GO Term');
+              data.addColumn('string', 'Representative');
+              data.addColumn('number', 'uniqueness');
+              data.addColumn('number', 'size');
+              data.addRows([
+                
+                       [ 'L-iditol\n2-dehydrogenase\nactivity',
+                         'L-iditol\n2-dehydrogenase\nactivity',
+                         70,
+                         3 ] , 
+                
+                       [ '25-hydroxycholecalciferol-24-hydroxylase\nactivity',
+                         'L-iditol\n2-dehydrogenase\nactivity',
+                         54,
+                         2 ] , 
+                
+                       [ 'protein\nhomodimerization\nactivity',
+                         'protein\nhomodimerization\nactivity',
+                         72,
+                         5 ] , 
+                
+                       [ 'oxidoreductase\nactivity',
+                         'oxidoreductase\nactivity',
+                         78,
+                         7 ] , 
+                
+                       [ 'drug\nbinding',
+                         'drug\nbinding',
+                         72,
+                         5 ] , 
+                
+                       [ 'poly(A)\nRNA\nbinding',
+                         'poly(A)\nRNA\nbinding',
+                         71,
+                         5 ] , 
+                
+                       [ 'iron\nion\nbinding',
+                         'iron\nion\nbinding',
+                         69,
+                         6 ] , 
+                
+                       [ 'GTP\nbinding',
+                         'iron\nion\nbinding',
+                         68,
+                         6 ] 
+                
+              ]);
+
+              // Instantiate our object.
+              vis = new drasticdata.DrasticTreemap(document.getElementById('treemap_MOLECULAR_FUNCTION'));
+              // Draw the treemap with the data we created locally and some options:
+              vis.draw(data, { groupbycol: "Representative", labelcol: "GO Term", variables: ['uniqueness', 'size'] } );
+
+          } // end function drawVisualization()
+
+        </script>
+        <div id="treemap_MOLECULAR_FUNCTION" style="width:1050px; height:500px;"></div>
+        <div><img src="gfx/csv.png" width="23" height="20" style="margin-left: 12px; margin-right: 4px"><a href="export_treemap.jsp?table=3">Export data to text table (CSV)</a>
+        <img src="gfx/R_icon_smaller.png" width="23" height="18" style="margin-left: 20px; margin-right: 4px"><a href="toR_treemap.jsp?table=3"> Make R script for plotting treemaps</a></div>
+        </div>
+        
+    </div>
+    
+    
+    
+    <script type="text/javascript">
+        window.onload =  new function() {
+            var div_id_1 = "cytoscapeweb_1";
+            var div_id_2 = "cytoscapeweb_2";
+            var div_id_3 = "cytoscapeweb_3";
+            var options = {
+                swfPath: "js/cytoscapeWeb/CytoscapeWeb",
+                flashInstallerPath: "js/cytoscapeWeb/playerProductInstall"
+            };
+
+            var xml_1 = '<?xml version="1.0" encoding="UTF-8"?>\
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns"\
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"\
+xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns\
+http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">\
+<key id="description" for="node" attr.name="description" attr.type="string"/>\
+<key id="value" for="node" attr.name="value" attr.type="float"/>\
+<key id="color" for="node" attr.name="color" attr.type="string"/>\
+<key id="log_size" for="node" attr.name="log_size" attr.type="float"/>\
+<key id="weight" for="edge" attr.name="weight" attr.type="float"/>\
+<graph id="REViGOgraph" edgedefault="undirected">\
+<node id="GO:10467">\
+	<data key="description">gene expression</data>\
+	<data key="value"> NaN</data>\
+	<data key="color">#ffffff</data>\
+	<data key="log_size">6.920</data>\
+</node>\
+<node id="GO:1649">\
+	<data key="description">osteoblast differentiation</data>\
+	<data key="value"> NaN</data>\
+	<data key="color">#ffffff</data>\
+	<data key="log_size">3.806</data>\
+</node>\
+<node id="GO:51028">\
+	<data key="description">mRNA transport</data>\
+	<data key="value"> NaN</data>\
+	<data key="color">#ffffff</data>\
+	<data key="log_size">4.422</data>\
+</node>\
+<node id="GO:6810">\
+	<data key="description">transport</data>\
+	<data key="value"> NaN</data>\
+	<data key="color">#ffffff</data>\
+	<data key="log_size">6.937</data>\
+</node>\
+<node id="GO:42359">\
+	<data key="description">vitamin D metabolism</data>\
+	<data key="value"> NaN</data>\
+	<data key="color">#ffffff</data>\
+	<data key="log_size">2.722</data>\
+</node>\
+<node id="GO:55114">\
+	<data key="description">oxidation-reduction process</data>\
+	<data key="value"> NaN</data>\
+	<data key="color">#ffffff</data>\
+	<data key="log_size">6.874</data>\
+</node>\
+<node id="GO:35754">\
+	<data key="description">B cell chemotaxis</data>\
+	<data key="value"> NaN</data>\
+	<data key="color">#ffffff</data>\
+	<data key="log_size">1.940</data>\
+</node>\
+<node id="GO:30490">\
+	<data key="description">maturation of SSU-rRNA</data>\
+	<data key="value"> NaN</data>\
+	<data key="color">#ffffff</data>\
+	<data key="log_size">2.719</data>\
+</node>\
+<node id="GO:1900182">\
+	<data key="description">positive regulation of protein localization to nucleus</data>\
+	<data key="value"> NaN</data>\
+	<data key="color">#ffffff</data>\
+	<data key="log_size">3.380</data>\
+</node>\
+<node id="GO:33280">\
+	<data key="description">response to vitamin D</data>\
+	<data key="value"> NaN</data>\
+	<data key="color">#ffffff</data>\
+	<data key="log_size">2.786</data>\
+</node>\
+<node id="GO:8380">\
+	<data key="description">RNA splicing</data>\
+	<data key="value"> NaN</data>\
+	<data key="color">#ffffff</data>\
+	<data key="log_size">4.683</data>\
+</node>\
+<edge source="GO:51028" target="GO:6810">\
+	<data key="weight">0.310</data>\
+</edge>\
+<edge source="GO:51028" target="GO:1900182">\
+	<data key="weight">0.441</data>\
+</edge>\
+<edge source="GO:6810" target="GO:1900182">\
+	<data key="weight">0.242</data>\
+</edge>\
+<edge source="GO:35754" target="GO:33280">\
+	<data key="weight">0.344</data>\
+</edge>\
+<edge source="GO:30490" target="GO:8380">\
+	<data key="weight">0.378</data>\
+</edge>\
+</graph>\
+</graphml>';
+var xml_2 = '<?xml version="1.0" encoding="UTF-8"?>\
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns"\
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"\
+xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns\
+http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">\
+<key id="description" for="node" attr.name="description" attr.type="string"/>\
+<key id="value" for="node" attr.name="value" attr.type="float"/>\
+<key id="color" for="node" attr.name="color" attr.type="string"/>\
+<key id="log_size" for="node" attr.name="log_size" attr.type="float"/>\
+<key id="weight" for="edge" attr.name="weight" attr.type="float"/>\
+<graph id="REViGOgraph" edgedefault="undirected">\
+<node id="GO:48471">\
+	<data key="description">perinuclear region of cytoplasm</data>\
+	<data key="value"> NaN</data>\
+	<data key="color">#ffffff</data>\
+	<data key="log_size">4.067</data>\
+</node>\
+<node id="GO:16235">\
+	<data key="description">aggresome</data>\
+	<data key="value"> NaN</data>\
+	<data key="color">#ffffff</data>\
+	<data key="log_size">2.806</data>\
+</node>\
+<node id="GO:70062">\
+	<data key="description">extracellular exosome</data>\
+	<data key="value"> NaN</data>\
+	<data key="color">#ffffff</data>\
+	<data key="log_size">4.848</data>\
+</node>\
+<node id="GO:5886">\
+	<data key="description">plasma membrane</data>\
+	<data key="value"> NaN</data>\
+	<data key="color">#ffffff</data>\
+	<data key="log_size">6.515</data>\
+</node>\
+<node id="GO:5654">\
+	<data key="description">nucleoplasm</data>\
+	<data key="value"> NaN</data>\
+	<data key="color">#ffffff</data>\
+	<data key="log_size">4.716</data>\
+</node>\
+<edge source="GO:48471" target="GO:5654">\
+	<data key="weight">0.068</data>\
+</edge>\
+<edge source="GO:70062" target="GO:5654">\
+	<data key="weight">0.366</data>\
+</edge>\
+</graph>\
+</graphml>';
+var xml_3 = '<?xml version="1.0" encoding="UTF-8"?>\
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns"\
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"\
+xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns\
+http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">\
+<key id="description" for="node" attr.name="description" attr.type="string"/>\
+<key id="value" for="node" attr.name="value" attr.type="float"/>\
+<key id="color" for="node" attr.name="color" attr.type="string"/>\
+<key id="log_size" for="node" attr.name="log_size" attr.type="float"/>\
+<key id="weight" for="edge" attr.name="weight" attr.type="float"/>\
+<graph id="REViGOgraph" edgedefault="undirected">\
+<node id="GO:8403">\
+	<data key="description">25-hydroxycholecalciferol-24-hydroxylase activity</data>\
+	<data key="value"> NaN</data>\
+	<data key="color">#ffffff</data>\
+	<data key="log_size">1.568</data>\
+</node>\
+<node id="GO:8144">\
+	<data key="description">drug binding</data>\
+	<data key="value"> NaN</data>\
+	<data key="color">#ffffff</data>\
+	<data key="log_size">5.089</data>\
+</node>\
+<node id="GO:5525">\
+	<data key="description">GTP binding</data>\
+	<data key="value"> NaN</data>\
+	<data key="color">#ffffff</data>\
+	<data key="log_size">5.903</data>\
+</node>\
+<node id="GO:16491">\
+	<data key="description">oxidoreductase activity</data>\
+	<data key="value"> NaN</data>\
+	<data key="color">#ffffff</data>\
+	<data key="log_size">6.841</data>\
+</node>\
+<node id="GO:42803">\
+	<data key="description">protein homodimerization activity</data>\
+	<data key="value"> NaN</data>\
+	<data key="color">#ffffff</data>\
+	<data key="log_size">4.760</data>\
+</node>\
+<node id="GO:44822">\
+	<data key="description">poly(A) RNA binding</data>\
+	<data key="value"> NaN</data>\
+	<data key="color">#ffffff</data>\
+	<data key="log_size">4.806</data>\
+</node>\
+<node id="GO:5506">\
+	<data key="description">iron ion binding</data>\
+	<data key="value"> NaN</data>\
+	<data key="color">#ffffff</data>\
+	<data key="log_size">6.067</data>\
+</node>\
+<node id="GO:3939">\
+	<data key="description">L-iditol 2-dehydrogenase activity</data>\
+	<data key="value"> NaN</data>\
+	<data key="color">#ffffff</data>\
+	<data key="log_size">3.111</data>\
+</node>\
+<edge source="GO:8403" target="GO:3939">\
+	<data key="weight">0.133</data>\
+</edge>\
+<edge source="GO:5525" target="GO:44822">\
+	<data key="weight">0.092</data>\
+</edge>\
+<edge source="GO:5525" target="GO:5506">\
+	<data key="weight">0.188</data>\
+</edge>\
+</graph>\
+</graphml>';
+
+
+             var visual_style = {
+                 global: {
+                     backgroundColor: "#ffffff"
+                 },
+                 nodes: {
+                     borderWidth: 2,
+                     labelFontSize: {
+                         continuousMapper: { attrName: "log_size", minValue: 12, maxValue: 20 }
+                     },
+                     borderColor: "#cccccc",
+                     label: { passthroughMapper: { attrName: "description"}},
+                     size: {
+                         defaultValue: 10,
+                         continuousMapper: { attrName: "log_size", minValue: 10, maxValue: 70 }
+                     },
+                     color: {passthroughMapper: {attrName: "color"}},
+                     labelHorizontalAnchor: "center"
+                 },
+                 edges: {
+                     width: {
+                        defaultValue: 2,
+                        continuousMapper: {attrName: "weight", minValue: 2, maxValue: 7}
+                     },
+                     color: "#dddddd"
+                 }
+             };
+
+            var layout = {
+                name: 'ForceDirected',
+                options: {
+                    weightAttr:    'weight',
+                    weightNorm:    'log',
+                    drag:          0.2,
+                    gravitation:   -100,
+                    minDistance:   1,
+                    maxDistance:   50,
+                    mass:          5,
+                    tension:       0.2,
+                    restLength:    50,
+                    iterations:    200,
+                    maxTime:       10000,
+                    autoStabilize: false
+                }
+            };
+
+            var vis_1 = new org.cytoscapeweb.Visualization(div_id_1, options);
+            var vis_2 = new org.cytoscapeweb.Visualization(div_id_2, options);
+            var vis_3 = new org.cytoscapeweb.Visualization(div_id_3, options);
+            vis_1.draw({ network: xml_1, visualStyle: visual_style, layout: layout });
+            vis_2.draw({ network: xml_2, visualStyle: visual_style, layout: layout });
+            vis_3.draw({ network: xml_3, visualStyle: visual_style, layout: layout });
+        };
+    </script>
+
+    
+    <div id="fragment-4">
+    
+      <script type="text/javascript" src="js/TermCloud/tc.js"></script>
+
+      <img src="gfx/cloud.png" alt="decoration" width="60" height="60"/> Frequent keywords within your set of GO terms: <p/>
+
+      <div id="tcdiv" class="termclouddiv"></div>
+      <script type="text/javascript">
+        google.load("visualization", "1");
+        google.setOnLoadCallback(draw);
+        function draw() {
+          data = new google.visualization.DataTable();
+          data.addColumn('string', 'keyword');
+          data.addColumn('number', 'enrichment');
+          data.addColumn('string', 'QuickGO');
+          data.addRows( 70 );
+            
+              data.setValue(0, 0, 'localisation');
+              data.setValue(0, 1, 4.256145404776511 );
+              data.setValue(0, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=localisation&what=GO' );
+            
+              data.setValue(1, 0, 'anabolic');
+              data.setValue(1, 1, 4.491602206293949 );
+              data.setValue(1, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=anabolic&what=GO' );
+            
+              data.setValue(2, 0, 'modifications');
+              data.setValue(2, 1, 3.656004352580281 );
+              data.setValue(2, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=modifications&what=GO' );
+            
+              data.setValue(3, 0, 'single-organism');
+              data.setValue(3, 1, 4.773328295396333 );
+              data.setValue(3, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=single-organism&what=GO' );
+            
+              data.setValue(4, 0, 'calciol');
+              data.setValue(4, 1, 3.929082708947341 );
+              data.setValue(4, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=calciol&what=GO' );
+            
+              data.setValue(5, 0, 'd2');
+              data.setValue(5, 1, 3.9011143858504798 );
+              data.setValue(5, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=d2&what=GO' );
+            
+              data.setValue(6, 0, 'd3');
+              data.setValue(6, 1, 4.697089507868076 );
+              data.setValue(6, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=d3&what=GO' );
+            
+              data.setValue(7, 0, 'fluid-filled');
+              data.setValue(7, 1, 3.7948201600849862 );
+              data.setValue(7, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=fluid-filled&what=GO' );
+            
+              data.setValue(8, 0, 'triacylglycerols');
+              data.setValue(8, 1, 4.491602206293949 );
+              data.setValue(8, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=triacylglycerols&what=GO' );
+            
+              data.setValue(9, 0, 'subcellular');
+              data.setValue(9, 1, 4.388981839542656 );
+              data.setValue(9, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=subcellular&what=GO' );
+            
+              data.setValue(10, 0, 'macromolecular');
+              data.setValue(10, 1, 3.8147907691313465 );
+              data.setValue(10, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=macromolecular&what=GO' );
+            
+              data.setValue(11, 0, 'functioning');
+              data.setValue(11, 1, 4.32325807453118 );
+              data.setValue(11, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=functioning&what=GO' );
+            
+              data.setValue(12, 0, 'transform');
+              data.setValue(12, 1, 6.458646391690509 );
+              data.setValue(12, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=transform&what=GO' );
+            
+              data.setValue(13, 0, 'compound');
+              data.setValue(13, 1, 3.6346581105091764 );
+              data.setValue(13, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=compound&what=GO' );
+            
+              data.setValue(14, 0, 'c-24');
+              data.setValue(14, 1, 5.842204127434226 );
+              data.setValue(14, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=c-24&what=GO' );
+            
+              data.setValue(15, 0, 'enclosed');
+              data.setValue(15, 1, 3.864485882017286 );
+              data.setValue(15, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=enclosed&what=GO' );
+            
+              data.setValue(16, 0, 'inclusion');
+              data.setValue(16, 1, 4.084806639874002 );
+              data.setValue(16, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=inclusion&what=GO' );
+            
+              data.setValue(17, 0, 'membrane-enclosed');
+              data.setValue(17, 1, 5.138088840261861 );
+              data.setValue(17, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=membrane-enclosed&what=GO' );
+            
+              data.setValue(18, 0, 'living');
+              data.setValue(18, 1, 3.8212152216647026 );
+              data.setValue(18, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=living&what=GO' );
+            
+              data.setValue(19, 0, 'plastids');
+              data.setValue(19, 1, 4.9235926728569215 );
+              data.setValue(19, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=plastids&what=GO' );
+            
+              data.setValue(20, 0, 'insoluble');
+              data.setValue(20, 1, 4.137201869667547 );
+              data.setValue(20, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=insoluble&what=GO' );
+            
+              data.setValue(21, 0, 'ch-oh');
+              data.setValue(21, 1, 4.268829861549209 );
+              data.setValue(21, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=ch-oh&what=GO' );
+            
+              data.setValue(22, 0, 'individual');
+              data.setValue(22, 1, 4.434143275374772 );
+              data.setValue(22, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=individual&what=GO' );
+            
+              data.setValue(23, 0, 'weight');
+              data.setValue(23, 1, 3.820709749612527 );
+              data.setValue(23, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=weight&what=GO' );
+            
+              data.setValue(24, 0, 'repetition');
+              data.setValue(24, 1, 7.146466851241847 );
+              data.setValue(24, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=repetition&what=GO' );
+            
+              data.setValue(25, 0, 'organic');
+              data.setValue(25, 1, 4.069303301004905 );
+              data.setValue(25, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=organic&what=GO' );
+            
+              data.setValue(26, 0, 'biopolymer');
+              data.setValue(26, 1, 6.458646391690509 );
+              data.setValue(26, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=biopolymer&what=GO' );
+            
+              data.setValue(27, 0, 'localization');
+              data.setValue(27, 1, 3.854399387587994 );
+              data.setValue(27, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=localization&what=GO' );
+            
+              data.setValue(28, 0, 'solvent');
+              data.setValue(28, 1, 3.7948201600849862 );
+              data.setValue(28, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=solvent&what=GO' );
+            
+              data.setValue(29, 0, 'non-encoded');
+              data.setValue(29, 1, 6.288644311067476 );
+              data.setValue(29, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=non-encoded&what=GO' );
+            
+              data.setValue(30, 0, 'sparingly');
+              data.setValue(30, 1, 3.7948201600849862 );
+              data.setValue(30, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=sparingly&what=GO' );
+            
+              data.setValue(31, 0, '25-hydroxycholecalciferol');
+              data.setValue(31, 1, 5.134656578657189 );
+              data.setValue(31, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=25-hydroxycholecalciferol&what=GO' );
+            
+              data.setValue(32, 0, 'guided');
+              data.setValue(32, 1, 4.076955874672417 );
+              data.setValue(32, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=guided&what=GO' );
+            
+              data.setValue(33, 0, 'substance');
+              data.setValue(33, 1, 3.8295315167956048 );
+              data.setValue(33, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=substance&what=GO' );
+            
+              data.setValue(34, 0, 'aggregated');
+              data.setValue(34, 1, 4.491602206293949 );
+              data.setValue(34, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=aggregated&what=GO' );
+            
+              data.setValue(35, 0, 'vacuoles');
+              data.setValue(35, 1, 5.118133322075634 );
+              data.setValue(35, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=vacuoles&what=GO' );
+            
+              data.setValue(36, 0, 'dimerization');
+              data.setValue(36, 1, 3.6773216023626496 );
+              data.setValue(36, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=dimerization&what=GO' );
+            
+              data.setValue(37, 0, 'calciferol');
+              data.setValue(37, 1, 5.053315172037984 );
+              data.setValue(37, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=calciferol&what=GO' );
+            
+              data.setValue(38, 0, 'ribosomes');
+              data.setValue(38, 1, 4.70218051906188 );
+              data.setValue(38, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=ribosomes&what=GO' );
+            
+              data.setValue(39, 0, 'self-propelled');
+              data.setValue(39, 1, 4.201204574397621 );
+              data.setValue(39, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=self-propelled&what=GO' );
+            
+              data.setValue(40, 0, 'multiple');
+              data.setValue(40, 1, 3.938443784558492 );
+              data.setValue(40, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=multiple&what=GO' );
+            
+              data.setValue(41, 0, 'location');
+              data.setValue(41, 1, 3.7850023981783987 );
+              data.setValue(41, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=location&what=GO' );
+            
+              data.setValue(42, 0, 'fat-soluble');
+              data.setValue(42, 1, 5.502498048385389 );
+              data.setValue(42, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=fat-soluble&what=GO' );
+            
+              data.setValue(43, 0, 'vitamins');
+              data.setValue(43, 1, 3.760522056941547 );
+              data.setValue(43, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=vitamins&what=GO' );
+            
+              data.setValue(44, 0, 'encapsulating');
+              data.setValue(44, 1, 4.802683255428893 );
+              data.setValue(44, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=encapsulating&what=GO' );
+            
+              data.setValue(45, 0, 'steroids');
+              data.setValue(45, 1, 4.00121323737913 );
+              data.setValue(45, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=steroids&what=GO' );
+            
+              data.setValue(46, 0, '24-hydroxylase');
+              data.setValue(46, 1, 5.228227479775661 );
+              data.setValue(46, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=24-hydroxylase&what=GO' );
+            
+              data.setValue(47, 0, 'low');
+              data.setValue(47, 1, 4.60526536181049 );
+              data.setValue(47, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=low&what=GO' );
+            
+              data.setValue(48, 0, 'protoplast');
+              data.setValue(48, 1, 5.646004046343247 );
+              data.setValue(48, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=protoplast&what=GO' );
+            
+              data.setValue(49, 0, '25-hydroxyvitamin');
+              data.setValue(49, 1, 5.134656578657189 );
+              data.setValue(49, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=25-hydroxyvitamin&what=GO' );
+            
+              data.setValue(50, 0, 'localizer');
+              data.setValue(50, 1, 9.936577602715825 );
+              data.setValue(50, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=localizer&what=GO' );
+            
+              data.setValue(51, 0, 'protein-coding');
+              data.setValue(51, 1, 4.647686528917496 );
+              data.setValue(51, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=protein-coding&what=GO' );
+            
+              data.setValue(52, 0, 'delta-5');
+              data.setValue(52, 1, 4.268829861549209 );
+              data.setValue(52, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=delta-5&what=GO' );
+            
+              data.setValue(53, 0, 'alcohols');
+              data.setValue(53, 1, 3.760522056941547 );
+              data.setValue(53, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=alcohols&what=GO' );
+            
+              data.setValue(54, 0, 'substances');
+              data.setValue(54, 1, 4.1802015008059605 );
+              data.setValue(54, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=substances&what=GO' );
+            
+              data.setValue(55, 0, 'ergocalciferol');
+              data.setValue(55, 1, 5.200518083268822 );
+              data.setValue(55, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=ergocalciferol&what=GO' );
+            
+              data.setValue(56, 0, 'solvents');
+              data.setValue(56, 1, 4.504618881620591 );
+              data.setValue(56, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=solvents&what=GO' );
+            
+              data.setValue(57, 0, 'subcomponent');
+              data.setValue(57, 1, 4.491602206293949 );
+              data.setValue(57, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=subcomponent&what=GO' );
+            
+              data.setValue(58, 0, 'immunogenic');
+              data.setValue(58, 1, 5.134656578657189 );
+              data.setValue(58, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=immunogenic&what=GO' );
+            
+              data.setValue(59, 0, 'macromolecule');
+              data.setValue(59, 1, 5.0119348458293045 );
+              data.setValue(59, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=macromolecule&what=GO' );
+            
+              data.setValue(60, 0, 'outermost');
+              data.setValue(60, 1, 3.6773216023626496 );
+              data.setValue(60, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=outermost&what=GO' );
+            
+              data.setValue(61, 0, 'organelle');
+              data.setValue(61, 1, 4.126678232958591 );
+              data.setValue(61, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=organelle&what=GO' );
+            
+              data.setValue(62, 0, 'cholecalciferol');
+              data.setValue(62, 1, 4.802683255428893 );
+              data.setValue(62, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=cholecalciferol&what=GO' );
+            
+              data.setValue(63, 0, 'housed');
+              data.setValue(63, 1, 5.134656578657189 );
+              data.setValue(63, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=housed&what=GO' );
+            
+              data.setValue(64, 0, 'ortho)phosphate');
+              data.setValue(64, 1, 4.735891938674157 );
+              data.setValue(64, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=ortho)phosphate&what=GO' );
+            
+              data.setValue(65, 0, 'bounded');
+              data.setValue(65, 1, 3.6383498879237304 );
+              data.setValue(65, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=bounded&what=GO' );
+            
+              data.setValue(66, 0, 'cellular');
+              data.setValue(66, 1, 3.6311880200898567 );
+              data.setValue(66, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=cellular&what=GO' );
+            
+              data.setValue(67, 0, 'macromolecules');
+              data.setValue(67, 1, 4.597545927559489 );
+              data.setValue(67, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=macromolecules&what=GO' );
+            
+              data.setValue(68, 0, 'cyclopentanoperhydrophenanthrene');
+              data.setValue(68, 1, 3.929082708947341 );
+              data.setValue(68, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=cyclopentanoperhydrophenanthrene&what=GO' );
+            
+              data.setValue(69, 0, 'oligophosphate');
+              data.setValue(69, 1, 4.504618881620591 );
+              data.setValue(69, 2, 'http://www.ebi.ac.uk/QuickGO/GSearch?q=oligophosphate&what=GO' );
+            
+          var outputDiv = document.getElementById('tcdiv');
+          var tc = new TermCloud(outputDiv);
+          tc.draw(data, null);
+        }
+      </script>
+      
+      </div>
+      
+      
+    </div>
+    
+
+    <p>&nbsp;Did you find REVIGO useful in your work? Feel free to share it with your colleagues.</p>
+    <!-- AddThis Button BEGIN -->
+    <div class="addthis_toolbox addthis_default_style " addthis:url="http://revigo.irb.hr/">
+    <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+    <a class="addthis_button_tweet"></a>
+    <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+    </div>
+    <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4dca746161f3f5a6"></script>
+    <!-- AddThis Button END --> 
+    
+
+
+  </body>
+</html>
