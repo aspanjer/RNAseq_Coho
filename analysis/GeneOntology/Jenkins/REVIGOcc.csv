@@ -1,0 +1,6 @@
+term_ID,description,frequency,plot_X,plot_Y,plot_size,log10 p-value,uniqueness,dispensability,representative,eliminated
+GO:0048471,"perinuclear region of cytoplasm",0.050%,-0.840,-6.202,4.067,-1.1706,0.507,0.000,48471,0
+GO:0070062,"extracellular exosome",0.300%, 5.840,-0.874,4.848,-1.6419,0.434,0.000,70062,0
+GO:0005886,"plasma membrane",13.934%,-5.343, 0.280,6.515,-2.1953,0.578,0.033,5886,0
+GO:0016235,"aggresome",0.003%,-0.569, 6.565,2.807,-1.0008,0.514,0.052,16235,0
+GO:0005654,"nucleoplasm",0.221%, 5.879, 0.958,4.716,-1.3103,0.382,0.366,5654,0

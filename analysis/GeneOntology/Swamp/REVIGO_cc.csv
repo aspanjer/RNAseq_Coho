@@ -1,0 +1,46 @@
+term_ID,description,frequency,plot_X,plot_Y,plot_size,log10 p-value,uniqueness,dispensability,representative,eliminated
+GO:0005576,"extracellular region",4.572%, 5.441,-1.547,6.031,-5.6635,0.957,0.000,5576,0
+GO:0005623,"cell",64.133%, 1.736,-1.543,7.178,-1.9202,0.984,0.000,5623,0
+GO:0005925,"focal adhesion",0.016%, 3.730,-3.819,3.588,-2.0828,0.955,0.000,5925,0
+GO:0016020,"membrane",51.720%, 0.944,-4.815,7.085,-6.6904,0.978,0.000,16020,0
+GO:0031012,"extracellular matrix",0.156%,-4.264,-4.569,4.564,-1.1006,0.955,0.000,31012,0
+GO:0070062,"extracellular exosome",0.300%,-5.063, 6.925,4.848,-30.2692,0.526,0.000,70062,0
+GO:0072562,"blood microparticle",0.012%,null,null,3.440,-6.5436,0.888,0.464,70062,1
+GO:0042470,"melanosome",0.004%,null,null,3.014,-1.4426,0.618,0.687,70062,1
+GO:0031089,"platelet dense granule lumen",0.000%,null,null,1.724,-1.1987,0.555,0.579,70062,1
+GO:0034364,"high-density lipoprotein particle",0.003%,null,null,2.885,-2.3607,0.836,0.617,70062,1
+GO:0030660,"Golgi-associated vesicle membrane",0.025%,null,null,3.763,-1.1655,0.469,0.772,70062,1
+GO:0031410,"cytoplasmic vesicle",0.167%,null,null,4.594,-1.3366,0.606,0.881,70062,1
+GO:0005615,"extracellular space",0.249%,null,null,4.767,-7.5214,0.891,0.584,70062,1
+GO:0097447,"dendritic tree",0.006%, 6.835, 0.715,3.173,-4.1331,0.897,0.000,97447,0
+GO:0043025,"neuronal cell body",0.028%,null,null,3.822,-1.0993,0.895,0.784,97447,1
+GO:0043209,"myelin sheath",0.005%,-1.541,-4.755,3.049,-1.8298,0.931,0.016,43209,0
+GO:0048471,"perinuclear region of cytoplasm",0.050%,-5.637, 1.378,4.067,-3.0419,0.750,0.018,48471,0
+GO:0009897,"external side of plasma membrane",0.032%, 5.702, 3.224,3.872,-2.1245,0.894,0.020,9897,0
+GO:0016021,"integral component of membrane",35.230%,-4.969,-2.310,6.918,-1.4554,0.926,0.139,16021,0
+GO:0002102,"podosome",0.002%,-0.676, 7.001,2.579,-2.6291,0.662,0.177,2102,0
+GO:0015630,"microtubule cytoskeleton",0.394%,null,null,4.967,-1.0002,0.683,0.592,2102,1
+GO:0000974,"Prp19 complex",0.001%, 3.498, 7.278,2.318,-1.1021,0.901,0.202,974,0
+GO:0005833,"hemoglobin complex",0.014%,-0.738, 5.163,3.525,-2.1500,0.714,0.230,5833,0
+GO:0044194,"cytolytic granule",0.000%,-6.418, 4.328,2.061,-1.9912,0.689,0.242,44194,0
+GO:0005764,"lysosome",0.049%,null,null,4.063,-1.4256,0.621,0.759,44194,1
+GO:0005829,"cytosol",0.807%,-5.767, 2.292,5.278,-1.6889,0.709,0.277,5829,0
+GO:0000151,"ubiquitin ligase complex",0.066%, 2.418, 6.982,4.193,-1.7297,0.824,0.283,151,0
+GO:0017053,"transcriptional repressor complex",0.014%, 2.095, 8.009,3.530,-1.0642,0.894,0.283,17053,0
+GO:0005777,"peroxisome",0.063%,-5.132, 4.737,4.170,-2.2143,0.592,0.331,5777,0
+GO:0005778,"peroxisomal membrane",0.027%,null,null,3.810,-1.5359,0.539,0.946,5777,1
+GO:0005782,"peroxisomal matrix",0.003%,null,null,2.834,-1.0891,0.586,0.827,5777,1
+GO:0005789,"endoplasmic reticulum membrane",0.136%,-4.395, 3.601,4.506,-5.1343,0.466,0.352,5789,0
+GO:0005768,"endosome",0.077%,null,null,4.257,-1.0709,0.535,0.717,5789,1
+GO:0031301,"integral component of organelle membrane",0.076%,null,null,4.252,-1.2134,0.600,0.936,5789,1
+GO:0031090,"organelle membrane",2.751%,null,null,5.810,-2.7357,0.553,0.501,5789,1
+GO:0043231,"intracellular membrane-bounded organelle",8.847%,null,null,6.318,-2.6249,0.533,0.767,5789,1
+GO:0005739,"mitochondrion",3.808%,null,null,5.952,-1.7662,0.530,0.637,5789,1
+GO:0030176,"integral component of endoplasmic reticulum membrane",0.034%,null,null,3.899,-1.9797,0.486,0.900,5789,1
+GO:0005783,"endoplasmic reticulum",0.299%,null,null,4.846,-4.3958,0.500,0.795,5789,1
+GO:0005794,"Golgi apparatus",0.265%,null,null,4.794,-1.2868,0.503,0.840,5789,1
+GO:0005791,"rough endoplasmic reticulum",0.007%,null,null,3.213,-1.1972,0.578,0.717,5789,1
+GO:0005579,"membrane attack complex",0.002%, 3.769, 5.246,2.754,-1.5219,0.847,0.362,5579,0
+GO:0005759,"mitochondrial matrix",0.055%,-4.266, 4.971,4.114,-2.8697,0.573,0.377,5759,0
+GO:0031904,"endosome lumen",0.000%,null,null,1.398,-1.8007,0.612,0.495,5759,1
+GO:0005654,"nucleoplasm",0.221%,null,null,4.716,-2.0591,0.562,0.774,5759,1

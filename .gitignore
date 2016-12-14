@@ -2,7 +2,12 @@
 *.gz
 
 *.fasta
-.Rproj.user
+
+*.Rproj.user
+
+*.RData
+
+*.Rhistory
 
 *.dmg
 

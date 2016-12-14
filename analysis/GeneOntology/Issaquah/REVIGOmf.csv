@@ -1,0 +1,139 @@
+term_ID,description,frequency,plot_X,plot_Y,plot_size,log10 p-value,uniqueness,dispensability,representative,eliminated
+GO:0003824,catalytic activity,0.6930,2.203,7.054,7.516,-1.4412,0.996,0,3824,0
+GO:0004866,endopeptidase inhibitor activity,0.0008,-0.038,8.144,4.598,-7.6576,0.972,0,4866,0
+GO:0004867,serine-type endopeptidase inhibitor activity,0.0003,null,null,4.155,-1.0922,0.972,0.932,4866,1
+GO:0005344,oxygen transporter activity,0.0004,-0.466,-0.917,4.266,-2.394,0.98,0,5344,0
+GO:0015078,hydrogen ion transmembrane transporter activity,0.0191,null,null,5.956,-1.3915,0.98,0.411,5344,1
+GO:0009055,electron carrier activity,0.0249,2.479,0.473,6.072,-1.8926,0.986,0,9055,0
+GO:0016620,"oxidoreductase activity, NAD or NADP as acceptor",0.0079,-4.374,6.277,5.571,-5.5513,0.904,0,16620,0
+GO:0034604,pyruvate dehydrogenase (NAD+) activity,0.0001,null,null,3.74,-1.7409,0.921,0.657,16620,1
+GO:0004029,aldehyde dehydrogenase (NAD) activity,0.0004,null,null,4.302,-5.9747,0.916,0.725,16620,1
+GO:0031715,C5L2 anaphylatoxin chemotactic receptor binding,0.0000,3.218,-3.433,1.568,-6.9355,0.874,0,31715,0
+GO:0008009,chemokine activity,0.0001,null,null,3.487,-3.5129,0.846,0.727,31715,1
+GO:0048020,CCR chemokine receptor binding,0.0000,null,null,2.45,-2.257,0.859,0.884,31715,1
+GO:0034987,immunoglobulin receptor binding,0.0000,null,null,2.152,-1.3877,0.878,0.407,31715,1
+GO:0005172,vascular endothelial growth factor receptor binding,0.0000,null,null,2.446,-1.0431,0.866,0.752,31715,1
+GO:0031731,CCR6 chemokine receptor binding,0.0000,null,null,1.681,-1.4289,0.868,0.817,31715,1
+GO:0032216,glucosaminyl-phosphotidylinositol O-acyltransferase activity,0.0000,5.612,4.15,0.903,-2.3344,0.762,0.011,32216,0
+GO:0004776,succinate-CoA ligase (GDP-forming) activity,0.0000,-4.111,-3.614,2.025,-3.8827,0.959,0.013,4776,0
+GO:0004775,succinate-CoA ligase (ADP-forming) activity,0.0007,null,null,4.533,-1.7796,0.953,0.714,4776,1
+GO:0004613,phosphoenolpyruvate carboxykinase (GTP) activity,0.0001,-0.927,-6.37,3.685,-1.7041,0.949,0.016,4613,0
+GO:0016831,carboxy-lyase activity,0.0092,null,null,5.636,-1.4942,0.94,0.588,4613,1
+GO:0004053,arginase activity,0.0001,5.552,-4.07,3.824,-2.5131,0.964,0.016,4053,0
+GO:0005542,folic acid binding,0.0001,-1.801,-2.414,3.711,-3.4855,0.947,0.022,5542,0
+GO:0031406,carboxylic acid binding,0.0089,null,null,5.623,-3.0716,0.939,0.676,5542,1
+GO:0070026,nitric oxide binding,0.0000,-2.21,2.759,1.851,-1.4289,0.972,0.023,70026,0
+GO:0016829,lyase activity,0.0449,0.33,6.304,6.327,-1.2259,0.962,0.028,16829,0
+GO:0003823,antigen binding,0.0006,0.7,8.982,4.484,-2.9727,0.967,0.032,3823,0
+GO:0019825,oxygen binding,0.0007,3.68,7.873,4.546,-2.6974,0.967,0.036,19825,0
+GO:0016491,oxidoreductase activity,0.1466,4.755,-2.396,6.841,-7.9508,0.961,0.045,16491,0
+GO:0005515,protein binding,0.0248,-3.314,0.059,6.07,-2.6122,0.961,0.048,5515,0
+GO:0008289,lipid binding,0.0024,4.972,-1.23,5.049,-1.2249,0.965,0.054,8289,0
+GO:0008144,drug binding,0.0026,-0.836,2.561,5.089,-1.9804,0.965,0.054,8144,0
+GO:0070025,carbon monoxide binding,0.0000,-7.135,-0.428,1.114,-1.5518,0.968,0.06,70025,0
+GO:0044822,poly(A) RNA binding,0.0014,0.451,-4.794,4.806,-3.3372,0.956,0.063,44822,0
+GO:0034930,1-hydroxypyrene sulfotransferase activity,0.0000,0.233,0.932,0.301,-1.0869,0.83,0.07,34930,0
+GO:0018727,2-phenanthrol sulfotransferase activity,0.0000,null,null,2.342,-1.0869,0.78,1,34930,1
+GO:0018726,9-phenanthrol sulfotransferase activity,0.0000,null,null,2.342,-1.0869,0.78,1,34930,1
+GO:0018725,"trans-3,4-dihydrodiolphenanthrene sulfotransferase activity",0.0000,null,null,2.342,-1.0869,0.798,0.653,34930,1
+GO:0018723,3-phenanthrol sulfotransferase activity,0.0000,null,null,2.342,-1.0869,0.78,0.636,34930,1
+GO:0018724,4-phenanthrol sulfotransferase activity,0.0000,null,null,2.342,-1.0869,0.78,1,34930,1
+GO:0018721,"trans-9R,10R-dihydrodiolphenanthrene sulfotransferase activity",0.0000,null,null,2.342,-1.0869,0.798,0.653,34930,1
+GO:0018722,1-phenanthrol sulfotransferase activity,0.0000,null,null,2.342,-1.0869,0.78,1,34930,1
+GO:0019111,phenanthrol sulfotransferase activity,0.0000,null,null,2.342,-1.0869,0.798,0.653,34930,1
+GO:0080131,hydroxyjasmonate sulfotransferase activity,0.0000,null,null,0.477,-1.0038,0.827,0.536,34930,1
+GO:0050694,galactose 3-O-sulfotransferase activity,0.0000,null,null,2.827,-1.0431,0.79,0.684,34930,1
+GO:0050698,proteoglycan sulfotransferase activity,0.0000,null,null,1.568,-1.0431,0.81,0.594,34930,1
+GO:0016232,HNK-1 sulfotransferase activity,0.0000,null,null,1,-1.0038,0.818,0.565,34930,1
+GO:0051922,cholesterol sulfotransferase activity,0.0000,null,null,2.064,-1.0869,0.802,0.524,34930,1
+GO:0048037,cofactor binding,0.0670,2.325,8.563,6.501,-3.8761,0.96,0.082,48037,0
+GO:0030351,"inositol-1,3,4,5,6-pentakisphosphate 3-phosphatase activity",0.0000,0.76,-6.488,0.301,-1.0431,0.969,0.09,30351,0
+GO:0020037,heme binding,0.0177,1.767,4.318,5.922,-1.4483,0.958,0.093,20037,0
+GO:0019809,spermidine binding,0.0000,-5.644,-2.268,0.954,-1.192,0.967,0.101,19809,0
+GO:0002060,purine nucleobase binding,0.0000,-4.87,-1.004,1.978,-1.0869,0.965,0.107,2060,0
+GO:0000062,fatty-acyl-CoA binding,0.0002,-6.749,-2.223,3.866,-2.9913,0.951,0.138,62,0
+GO:0050660,flavin adenine dinucleotide binding,0.0162,null,null,5.885,-1.4406,0.933,0.457,62,1
+GO:0008201,heparin binding,0.0001,null,null,3.777,-1.0235,0.945,0.57,62,1
+GO:0051287,NAD binding,0.0111,null,null,5.72,-1.3928,0.94,0.683,62,1
+GO:0043395,heparan sulfate proteoglycan binding,0.0000,null,null,3.025,-1.0762,0.862,0.519,62,1
+GO:0004252,serine-type endopeptidase activity,0.0068,5.648,-4.499,5.504,-2.1144,0.959,0.172,4252,0
+GO:0008403,25-hydroxycholecalciferol-24-hydroxylase activity,0.0000,-5.549,2.938,1.58,-1.5518,0.932,0.173,8403,0
+GO:0030342,"1-alpha,25-dihydroxyvitamin D3 24-hydroxylase activity",0.0000,null,null,1.58,-1.5518,0.932,0.951,8403,1
+GO:0008480,sarcosine dehydrogenase activity,0.0000,-6.572,2.503,1.778,-1.5518,0.943,0.178,8480,0
+GO:0004623,phospholipase A2 activity,0.0001,-3.484,-5.23,3.709,-1.0205,0.963,0.214,4623,0
+GO:0008951,palmitoleoyl [acyl-carrier-protein]-dependent acyltransferase activity,0.0000,7.26,2.282,0.301,-1.2569,0.798,0.214,8951,0
+GO:0019186,acyl-CoA N-acyltransferase activity,0.0000,6.592,1.544,0.301,-1.2569,0.792,0.214,19186,0
+GO:0052890,"oxidoreductase activity, acting on the CH-CH group of donors, with a flavin as acceptor",0.0000,-4.155,5.765,3.213,-3.5129,0.927,0.217,52890,0
+GO:0003995,acyl-CoA dehydrogenase activity,0.0037,null,null,5.241,-2.3328,0.91,0.563,52890,1
+GO:0050421,nitrite reductase (NO-forming) activity,0.0001,-3.545,5.197,3.374,-1.5518,0.934,0.222,50421,0
+GO:0046941,azetidine-2-carboxylic acid acetyltransferase activity,0.0000,6.965,1.203,0.301,-1.2569,0.791,0.248,46941,0
+GO:0004450,isocitrate dehydrogenase (NADP+) activity,0.0005,-5.503,4.666,4.372,-2.947,0.921,0.263,4450,0
+GO:0004448,isocitrate dehydrogenase activity,0.0005,null,null,4.403,-1.136,0.92,0.511,4450,1
+GO:0004658,propionyl-CoA carboxylase activity,0.0000,-5.029,-3.894,3.181,-2.7417,0.962,0.268,4658,0
+GO:0035925,mRNA 3'-UTR AU-rich region binding,0.0000,2.799,-5.274,2.303,-1.4875,0.963,0.281,35925,0
+GO:0044540,L-cystine L-cysteine-lyase (deaminating),0.0000,1.959,-6.314,2.951,-1.192,0.949,0.295,44540,0
+GO:0080146,L-cysteine desulfhydrase activity,0.0000,null,null,2.942,-1.0869,0.949,0.604,44540,1
+GO:0016751,S-succinyltransferase activity,0.0003,6.209,3.631,4.148,-1.2569,0.668,0.3,16751,0
+GO:0043741,L-2-aminoadipate N-acetyltransferase activity,0.0001,null,null,3.535,-1.2569,0.715,0.405,16751,1
+GO:0004145,diamine N-acetyltransferase activity,0.0001,null,null,3.331,-1.136,0.721,0.455,16751,1
+GO:0004147,dihydrolipoamide branched chain acyltransferase activity,0.0000,null,null,1.785,-1.192,0.744,0.629,16751,1
+GO:0034945,"2,6-dimethyl-5-methylene-3-oxo-heptanoyl-CoA C-acetyltransferase activity",0.0006,null,null,4.439,-1.2569,0.695,0.493,16751,1
+GO:0018711,benzoyl acetate-CoA thiolase activity,0.0006,null,null,4.439,-1.2569,0.695,0.493,16751,1
+GO:0018712,3-hydroxybutyryl-CoA thiolase activity,0.0006,null,null,4.439,-1.2569,0.695,0.493,16751,1
+GO:0090595,acetyl-CoA:L-lysine N6-acetyltransferase,0.0001,null,null,3.66,-1.2569,0.712,0.473,16751,1
+GO:0018713,3-ketopimelyl-CoA thiolase activity,0.0006,null,null,4.439,-1.2569,0.695,0.493,16751,1
+GO:0030523,dihydrolipoamide S-acyltransferase activity,0.0002,null,null,3.976,-1.2569,0.684,0.821,16751,1
+GO:0019705,protein-cysteine S-myristoyltransferase activity,0.0001,null,null,3.521,-1.2569,0.689,0.772,16751,1
+GO:0019707,protein-cysteine S-acyltransferase activity,0.0002,null,null,3.896,-1.192,0.687,0.812,16751,1
+GO:0018030,peptidyl-lysine N6-myristoyltransferase activity,0.0000,null,null,3.02,-1.2569,0.73,1.057,16751,1
+GO:0008374,O-acyltransferase activity,0.0026,null,null,5.083,-1.106,0.67,0.688,16751,1
+GO:0034848,naphthyl-2-oxomethyl-succinyl-CoA succinyl transferase activity,0.0006,null,null,4.439,-1.2569,0.695,0.493,16751,1
+GO:0034851,"2,4,4-trimethyl-3-oxopentanoyl-CoA 2-C-propanoyl transferase activity",0.0006,null,null,4.439,-1.2569,0.695,0.493,16751,1
+GO:0016410,N-acyltransferase activity,0.0119,null,null,5.751,-1.1215,0.64,0.635,16751,1
+GO:0016408,C-acyltransferase activity,0.0010,null,null,4.658,-1.2569,0.687,0.519,16751,1
+GO:0016417,S-acyltransferase activity,0.0011,null,null,4.706,-1.2569,0.686,0.515,16751,1
+GO:0043806,keto acid formate lyase activity,0.0006,null,null,4.439,-1.2569,0.695,0.493,16751,1
+GO:0016418,S-acetyltransferase activity,0.0002,null,null,3.984,-1.2569,0.68,0.822,16751,1
+GO:0016419,S-malonyltransferase activity,0.0004,null,null,4.289,-1.2569,0.673,0.858,16751,1
+GO:0016420,malonyltransferase activity,0.0004,null,null,4.289,-1.2569,0.701,0.469,16751,1
+GO:0016748,succinyltransferase activity,0.0009,null,null,4.609,-1.2569,0.689,0.493,16751,1
+GO:0016750,O-succinyltransferase activity,0.0002,null,null,3.874,-1.2569,0.676,0.836,16751,1
+GO:0016749,N-succinyltransferase activity,0.0004,null,null,4.282,-1.2569,0.682,0.885,16751,1
+GO:0034915,2-methylhexanoyl-CoA C-acetyltransferase activity,0.0006,null,null,4.439,-1.2569,0.695,0.46,16751,1
+GO:0034919,butyryl-CoA 2-C-propionyltransferase activity,0.0006,null,null,4.439,-1.2569,0.695,0.493,16751,1
+GO:0017091,AU-rich element binding,0.0000,-0.757,-4.603,2.885,-1.1703,0.962,0.303,17091,0
+GO:0016752,sinapoyltransferase activity,0.0000,5.991,2.365,1.176,-1.192,0.779,0.309,16752,0
+GO:0004122,cystathionine beta-synthase activity,0.0001,-1.682,-6.177,3.441,-1.334,0.952,0.313,4122,0
+GO:0052858,"peptidyl-lysine N-acetyltransferase activity, acting on acetyl phosphate as donor",0.0000,5.724,3.413,1.633,-1.192,0.762,0.324,52858,0
+GO:0051990,(R)-2-hydroxyglutarate dehydrogenase activity,0.0000,-6.356,3.969,1.477,-1.0869,0.939,0.336,51990,0
+GO:0016627,"oxidoreductase activity, acting on the CH-CH group of donors",0.0109,-4.688,5.84,5.713,-2.3548,0.914,0.35,16627,0
+GO:0003954,NADH dehydrogenase activity,0.0079,-3.863,6.611,5.573,-1.6355,0.916,0.35,3954,0
+GO:0034738,lanosterol O-acyltransferase activity,0.0000,6.773,2.789,0.301,-1.192,0.771,0.356,34738,0
+GO:0034737,ergosterol O-acyltransferase activity,0.0000,null,null,0.778,-1.0869,0.759,0.78,34738,1
+GO:0016454,C-palmitoyltransferase activity,0.0000,6.581,3.803,2.633,-1.2569,0.726,0.363,16454,0
+GO:0019105,N-palmitoyltransferase activity,0.0006,null,null,4.451,-1.2569,0.661,0.869,16454,1
+GO:0018031,peptidyl-lysine N6-palmitoyltransferase activity,0.0003,null,null,4.084,-1.2569,0.676,1.054,16454,1
+GO:0016416,O-palmitoyltransferase activity,0.0001,null,null,3.572,-1.192,0.673,0.98,16454,1
+GO:0043849,Ras palmitoyltransferase activity,0.0000,null,null,1.519,-1.136,0.752,0.64,16454,1
+GO:0005102,receptor binding,0.0042,2.453,-3.24,5.293,-5.9914,0.848,0.368,5102,0
+GO:0051219,phosphoprotein binding,0.0000,null,null,3.284,-1.394,0.879,0.462,5102,1
+GO:0001965,G-protein alpha-subunit binding,0.0000,null,null,2.456,-1.0477,0.888,0.412,5102,1
+GO:0005178,integrin binding,0.0000,null,null,3.325,-1.7346,0.853,0.905,5102,1
+GO:0001948,glycoprotein binding,0.0001,null,null,3.46,-1.2545,0.875,0.475,5102,1
+GO:0046982,protein heterodimerization activity,0.0011,null,null,4.707,-1.3052,0.856,0.72,5102,1
+GO:0019955,cytokine binding,0.0001,null,null,3.449,-1.223,0.877,0.474,5102,1
+GO:0045296,cadherin binding,0.0000,null,null,3.139,-2.5449,0.873,0.453,5102,1
+GO:0032403,protein complex binding,0.0015,null,null,4.84,-2.7098,0.856,0.6,5102,1
+GO:0001848,complement binding,0.0002,null,null,3.928,-1.9091,0.87,0.511,5102,1
+GO:0005518,collagen binding,0.0001,null,null,3.807,-1.5273,0.868,0.501,5102,1
+GO:0042802,identical protein binding,0.0015,null,null,4.862,-1.2577,0.856,0.603,5102,1
+GO:0042803,protein homodimerization activity,0.0012,null,null,4.76,-1.8985,0.855,0.591,5102,1
+GO:0016651,"oxidoreductase activity, acting on NAD(P)H",0.0135,-3.721,6.28,5.805,-1.7796,0.913,0.372,16651,0
+GO:0019107,myristoyltransferase activity,0.0000,6.204,4.224,3.02,-1.0431,0.738,0.38,19107,0
+GO:0016753,O-sinapoyltransferase activity,0.0000,6.433,3.083,1.176,-1.2569,0.756,0.387,16753,0
+GO:0016411,acylglycerol O-acyltransferase activity,0.0007,null,null,4.542,-1.0431,0.663,0.805,16753,1
+GO:0016412,serine O-acyltransferase activity,0.0005,null,null,4.383,-1.192,0.669,0.598,16753,1
+GO:0004772,sterol O-acyltransferase activity,0.0000,null,null,1.964,-1.0038,0.739,0.467,16753,1
+GO:0016406,carnitine O-acyltransferase activity,0.0000,null,null,2.324,-1.2569,0.731,0.456,16753,1
+GO:0016414,O-octanoyltransferase activity,0.0000,null,null,1.69,-1.2569,0.745,0.413,16753,1
+GO:0004361,glutaryl-CoA dehydrogenase activity,0.0000,-5.241,5.627,2.196,-1.5518,0.933,0.39,4361,0

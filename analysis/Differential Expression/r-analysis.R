@@ -8,36 +8,79 @@ deseq2.colData <- data.frame(condition=factor(c(rep("Coulter", 6), rep("Issaquah
                                                 rep("Jenkins",6), rep("Swamp",6))), 
                              type=factor(rep("paired-end", 24)))
 rownames(deseq2.colData) <- colnames(data)
+
+#make the data matrix
 deseq2.dds <- DESeqDataSetFromMatrix(countData = data,
                                      colData = deseq2.colData, 
                                      design = ~ condition)
-?results
+
+#run statistical model and get DE results
 deseq2.dds <- DESeq(deseq2.dds)
+
 #call results table for Issaquah v. Coulter
 deseq2.IssCoulterres <- results(deseq2.dds, contrast= c("condition", "Issaquah", "Coulter"))
 write.table(deseq2.IssCoulterres, file="ISvCO.txt")
 
 #call results table for Jenkins v. Coulter
-deseq2.JenkCoultres<- results (deseq2.dds, contrast = c("condition", "Coulter", "Jenkins"))
+deseq2.JenkCoultres<- results (deseq2.dds, contrast = c("condition", "Jenkins", "Coulter"))
 write.table(deseq2.JenkCoultres, file="JEvCO.txt")
 
 #call results table for Swamp v Coulter
-deseq2.SwampCoultres<-results(deseq2.dds, contrast = c("condition", "Coulter", "Swamp"))
+deseq2.SwampCoultres<-results(deseq2.dds, contrast = c("condition", "Swamp", "Coulter"))
 write.table(deseq2.SwampCoultres, file="SWvCO.txt")
 
-head(deseq2.res, n=30)
+###Heatmap for DE genes, Site-site comparison
 
-dim(deseq2.res[!is.na(deseq2.res$padj) & deseq2.res$padj <= 0.05, ])
+#Read in files of differentially expressed genes:
+Issaquah.DE<-read.table(file="IssaquahDE.txt", header=F)
+Jenkins.DE<-read.table(file="JenkinsDE.txt", header=F)
+Swamp.DE<-read.table(file="SwampDE.txt", header=F)
 
-tmp <- deseq2.res
+#Create a matrix of all DE genes for comparison
+DE.mat<-cbind(Issaquah.DE[,c(1,3)],Jenkins.DE[,3],Swamp.DE[,3])
+rownames(DE.mat)<-DE.mat$V1
+colnames(DE.mat)<-c("Issaquah", "Jenkins", "Swamp")
+DE.mat<-DE.mat[,-1]
+#heatmap of DE genes across all sites
+pheatmap(DE.mat,fontsize_col=20, show_rownames=F, main="Log-fold change for differentially expressed genes as compared to refrence site (Coulter)")
+
+#instal pcaExploreer
+source("https://bioconductor.org/biocLite.R")
+biocLite("pcaExplorer")
+library(pcaExplorer)
+?pcaExplorer
+
+#create 3 plot graph
+par(mfrow=c(1,3),oma = c(4, 4, 2, 0), mar=c(2,0,2,.4) )
 # The main plot
+tmp <- deseq2.IssCoulterres
 plot(tmp$baseMean, tmp$log2FoldChange, pch=20, cex=0.45, ylim=c(-3, 3), log="x", col="darkgray",
-     main="DEG Virus Exposure  (pval <= 0.05)",
-     xlab="mean of normalized counts",
-     ylab="Log2 Fold Change")
-# Getting the significant points and plotting them again so they're a different color
-tmp.sig <- deseq2.res[!is.na(deseq2.res$padj) & deseq2.res$padj <= 0.05, ]
-points(tmp.sig$baseMean, tmp.sig$log2FoldChange, pch=20, cex=0.45, col="purple")
+     main="Issaquah v. Coulter", xlab="", ylab="")
+mtext("log2 Fold Change", side=2, line=2.2)
+mtext("mean of normalized counts", side=1, line=2.3)
+
+# Getting the significant points and plotting them again so they're a different color for each site comparison
+tmp.sig <- deseq2.IssCoulterres[!is.na(deseq2.IssCoulterres$padj) & deseq2.IssCoulterres$padj <= 0.05, ]
+points(tmp.sig$baseMean, tmp.sig$log2FoldChange, pch=20, cex=0.45, col="red")
+
+#Jenkins pts
+tmp2 <- deseq2.JenkCoultres
+plot(tmp2$baseMean, tmp2$log2FoldChange, yaxt="n", pch=20, cex=0.45, ylim=c(-3, 3), log="x", col="darkgray",
+     main="Jenkins v. Coulter")
+
+tmp2.sig <- deseq2.JenkCoultres[!is.na(deseq2.JenkCoultres$padj) & deseq2.JenkCoultres$padj <= 0.05, ]
+points(tmp2.sig$baseMean, tmp2.sig$log2FoldChange, pch=20, cex=0.45, col="red")
+
+#Swamp pts
+tmp3 <- deseq2.SwampCoultres
+plot(tmp3$baseMean, tmp3$log2FoldChange, pch=20, yaxt="n", cex=0.45, ylim=c(-3, 3), log="x", col="darkgray",
+     main="Jenkins v. Coulter")
+
+tmp3.sig <- deseq2.SwampCoultres[!is.na(deseq2.SwampCoultres$padj) & deseq2.SwampCoultres$padj <= 0.05, ]
+points(tmp2.sig$baseMean, tmp2.sig$log2FoldChange, pch=20, cex=0.45, col="red")
+
+mtext("DEG in Different Streams  (pval <= 0.05)", outer = TRUE, cex = 1.5)
+
 # 2 FC lines
 abline(h=c(-1,1), col="green")
 
@@ -124,23 +167,5 @@ mat.JE<-mat.JE[-1,]
 df.JE<- as.data.frame(colData(rld.JE)[,c("condition","type") ])
 pheatmap(mat.JE, annotation_col=df.JE)
 
-#Heatmap for DE genes, Site-site comparison
-Issaquah.DE<-read.table(file="IssaquahDE.txt", header=F)
-Jenkins.DE<-read.table(file="JenkinsDE.txt", header=F)
-Swamp.DE<-read.table(file="SwampDE.txt", header=F)
 
-DE.mat<-cbind(Issaquah.DE[,c(1,3)],Jenkins.DE[,3],Swamp.DE[,3])
-rownames(DE.mat)<-DE.mat$V1
-write.table(DE.mat, file="edit")
-
-DE.mat<-read.table(file="edit.txt", header=TRUE)
-rownames(DE.mat)<-DE.mat$V1
-DE.mat<-DE.mat[,-1]
-pheatmap(DE.mat,fontsize_col=20, show_rownames=F, main="Log-fold change for differentially expressed genes as compared to refrence site (Coulter)")
-
-#instal pcaExploreer
-source("https://bioconductor.org/biocLite.R")
-biocLite("pcaExplorer")
-library(pcaExplorer)
-?pcaExplorer
 pcaExplorer()

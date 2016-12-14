@@ -1,0 +1,55 @@
+term_ID,description,frequency,plot_X,plot_Y,plot_size,log10 p-value,uniqueness,dispensability,representative,eliminated
+GO:0005576,extracellular region,0.0457,-5.429,-1.687,6.031,-5.8601,0.964,0,5576,0
+GO:0005623,cell,0.6413,-2.638,-2.476,7.178,-2.3132,0.987,0,5623,0
+GO:0005925,focal adhesion,0.0002,-3.829,-5.061,3.588,-1.1781,0.963,0,5925,0
+GO:0016020,membrane,0.5172,-2.299,1.743,7.085,-2.5213,0.982,0,16020,0
+GO:0043209,myelin sheath,0.0001,-1.483,-6.917,3.049,-12.5171,0.936,0,43209,0
+GO:0070062,extracellular exosome,0.0030,7.709,-0.02,4.848,-33.4377,0.529,0,70062,0
+GO:0019815,B cell receptor complex,0.0000,null,null,2.111,-1.0257,0.674,0.941,70062,1
+GO:0072562,blood microparticle,0.0001,null,null,3.44,-9.9747,0.866,0.464,70062,1
+GO:0005577,fibrinogen complex,0.0000,null,null,2.678,-1.4281,0.753,0.602,70062,1
+GO:0016023,cytoplasmic membrane-bounded vesicle,0.0013,null,null,4.493,-1.6784,0.574,0.876,70062,1
+GO:0043231,intracellular membrane-bounded organelle,0.0885,null,null,6.318,-1.415,0.549,0.767,70062,1
+GO:0005739,mitochondrion,0.0381,null,null,5.952,-13.9586,0.55,0.481,70062,1
+GO:0034361,very-low-density lipoprotein particle,0.0000,null,null,2.683,-2.003,0.775,0.603,70062,1
+GO:0005615,extracellular space,0.0025,null,null,4.767,-10.0783,0.882,0.584,70062,1
+GO:0042470,melanosome,0.0000,null,null,3.014,-1.1744,0.637,0.687,70062,1
+GO:0042571,"immunoglobulin complex, circulating",0.0000,null,null,1.699,-1.6351,0.747,0.541,70062,1
+GO:0031410,cytoplasmic vesicle,0.0017,null,null,4.594,-1.9536,0.629,0.881,70062,1
+GO:0009897,external side of plasma membrane,0.0003,2.15,6.726,3.872,-6.5607,0.861,0.018,9897,0
+GO:0005833,hemoglobin complex,0.0001,3.319,-3.705,3.525,-3.9666,0.68,0.019,5833,0
+GO:0043025,neuronal cell body,0.0003,-3.78,4.487,3.822,-1.4658,0.934,0.02,43025,0
+GO:0009986,cell surface,0.0019,-5.337,1.477,4.641,-4.3233,0.93,0.022,9986,0
+GO:0045177,apical part of cell,0.0004,-1.55,6.239,3.918,-1.4806,0.933,0.022,45177,0
+GO:0005938,cell cortex,0.0009,3.548,3.873,4.344,-1.1678,0.706,0.218,5938,0
+GO:0097136,Bcl-2 family protein complex,0.0000,2.445,-6.76,2.176,-1.0257,0.831,0.22,97136,0
+GO:0002102,podosome,0.0000,5.549,-3.831,2.579,-1.4789,0.647,0.23,2102,0
+GO:0031094,platelet dense tubular network,0.0000,7.948,1.669,2.217,-1.0694,0.727,0.247,31094,0
+GO:0005581,collagen trimer,0.0006,3.662,-6.672,4.126,-1.3125,0.8,0.28,5581,0
+GO:0005886,plasma membrane,0.1393,3.149,6.535,6.515,-1.191,0.862,0.322,5886,0
+GO:0005764,lysosome,0.0005,6.081,0.913,4.063,-2.0371,0.619,0.325,5764,0
+GO:0005765,lysosomal membrane,0.0002,null,null,3.75,-1.0519,0.543,0.944,5764,1
+GO:0043159,acrosomal matrix,0.0000,null,null,1.863,-1.0257,0.595,0.672,5764,1
+GO:0005759,mitochondrial matrix,0.0006,6.011,-0.723,4.114,-13.3391,0.535,0.328,5759,0
+GO:0031904,endosome lumen,0.0000,null,null,1.398,-2.0295,0.631,0.495,5759,1
+GO:0031902,late endosome membrane,0.0001,null,null,3.136,-1.5746,0.558,0.716,5759,1
+GO:0005741,mitochondrial outer membrane,0.0004,null,null,4.008,-1.3886,0.545,0.479,5759,1
+GO:0005743,mitochondrial inner membrane,0.0219,null,null,5.712,-10.6108,0.46,0.645,5759,1
+GO:0005747,mitochondrial respiratory chain complex I,0.0001,null,null,3.409,-3.7932,0.432,0.439,5759,1
+GO:0045244,succinate-CoA ligase complex (GDP-forming),0.0000,null,null,1.041,-1.4109,0.535,0.642,5759,1
+GO:0000276,"mitochondrial proton-transporting ATP synthase complex, coupling factor F(o)",0.0005,null,null,4.095,-1.9513,0.402,1.04,5759,1
+GO:0000275,"mitochondrial proton-transporting ATP synthase complex, catalytic core F(1)",0.0000,null,null,2.888,-2.0888,0.468,0.802,5759,1
+GO:0045252,oxoglutarate dehydrogenase complex,0.0006,null,null,4.121,-1.6351,0.629,0.559,5759,1
+GO:0005770,late endosome,0.0002,null,null,3.642,-1.1501,0.622,0.782,5759,1
+GO:0042612,MHC class I protein complex,0.0013,null,null,4.47,-1.5697,0.623,0.767,5759,1
+GO:0005753,mitochondrial proton-transporting ATP synthase complex,0.0006,null,null,4.134,-3.5302,0.4,0.941,5759,1
+GO:0005751,mitochondrial respiratory chain complex IV,0.0001,null,null,3.03,-1.5097,0.459,0.865,5759,1
+GO:0005750,mitochondrial respiratory chain complex III,0.0001,null,null,3.118,-2.5417,0.448,0.874,5759,1
+GO:0005763,mitochondrial small ribosomal subunit,0.0000,null,null,3.024,-1.1578,0.545,0.601,5759,1
+GO:0005758,mitochondrial intermembrane space,0.0001,null,null,3.473,-1.5264,0.566,0.636,5759,1
+GO:0035631,CD40 receptor complex,0.0000,null,null,2.415,-2.8373,0.689,0.55,5759,1
+GO:0005788,endoplasmic reticulum lumen,0.0001,null,null,3.232,-1.5426,0.582,0.618,5759,1
+GO:0005654,nucleoplasm,0.0022,null,null,4.716,-1.5706,0.549,0.774,5759,1
+GO:0005777,peroxisome,0.0006,5.451,0.337,4.17,-2.2963,0.628,0.331,5777,0
+GO:0005778,peroxisomal membrane,0.0003,null,null,3.81,-1.0066,0.553,0.946,5777,1
+GO:0031301,integral component of organelle membrane,0.0008,7.557,-1.141,4.252,-1.4281,0.594,0.348,31301,0

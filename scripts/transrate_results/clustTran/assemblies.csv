@@ -1,0 +1,2 @@
+assembly,n_seqs,smallest,largest,n_bases,mean_len,n_under_200,n_over_1k,n_over_10k,n_with_orf,mean_orf_percent,n90,n70,n50,n30,n10,gc,bases_n,proportion_n,score,optimal_score,cutoff,weighted
+/Users/andrewspanjer/RNAseq_Coho/analysis/Trinity/assembly_clust.fas,274696,201,14674,207824790,756.56285,0,56121,36,49054,48.34365,297,612,1311,2299,4046,0.45421,0,0.0,NA,NA,NA,NA

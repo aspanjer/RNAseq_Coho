@@ -20,10 +20,18 @@ A summary of the data analysis is available for download from GitHub, including 
 
 ##Results
 ###Transcriptome and Annotation
-###Differential Expression Analysis
-###Gene Ontology Analysis
+Table with transcriptome stats from transrate
+Annotation results description
 
-##Disscusion
+###Differential Expression Analysis
+Number of DE genes for each comparison (basic bargraph)
+Volcano plot
+PCA
+Heatmap
+
+###Gene Ontology Analysis
+GO enrichment Table
+REVIGO graphic tables (this will be the hardest to talk about) 
 
 ###How to manage gene ontology analysis
 **Take enriched terms and then simplifiy with revigo.**
