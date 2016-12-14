@@ -12,7 +12,8 @@
 
 **multiQC**: Collection of all QC records for display in a browser
 
-**Trinity** Files related to de novo transcriptome construction with Trinity 
+**Transcriptome**: Files related to de novo transcriptome construction with Trinity 
 
+**transrate_resulst**: Summary stats on Transcriptome2
 
 
