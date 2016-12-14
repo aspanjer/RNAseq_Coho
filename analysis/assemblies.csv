@@ -1,0 +1,2 @@
+assembly,n_seqs,smallest,largest,n_bases,mean_len,n_under_200,n_over_1k,n_over_10k,n_with_orf,mean_orf_percent,n90,n70,n50,n30,n10,gc,bases_n,proportion_n,score,optimal_score,cutoff,weighted
+/Users/andrewspanjer/RNAseq_Coho/analysis/Transcriptome/transcriptome2.fasta,356147,201,14674,293356238,823.69426,0,83000,82,73387,49.45142,307,726,1544,2550,4304,0.45823,0,0.0,NA,NA,NA,NA

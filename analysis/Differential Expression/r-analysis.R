@@ -1,3 +1,7 @@
+#This file contains the code needed to perform differential expresion analysis on the 
+#Coho_counts.txt data and subsequent visualization. Coho_counts.txt can be found here: 
+#https://media.githubusercontent.com/media/aspanjer/RNAseq_Coho/master/analysis/Differential%20Expression/Coho_counts.txt 
+
 source("https://bioconductor.org/biocLite.R")
 biocLite("DESeq2")
 library(DESeq2)
@@ -29,6 +33,17 @@ write.table(deseq2.JenkCoultres, file="JEvCO.txt")
 deseq2.SwampCoultres<-results(deseq2.dds, contrast = c("condition", "Swamp", "Coulter"))
 write.table(deseq2.SwampCoultres, file="SWvCO.txt")
 
+#Results files are used for all downstream analysis. The remainder of this code was used 
+#to create figures that show the general pattern of DEGs:
+
+###PCA grpah of individual counts
+#instal pcaExploreer
+source("https://bioconductor.org/biocLite.R")
+biocLite("pcaExplorer")
+library(pcaExplorer)
+pcaExplorer() #to create PCA graph open pcaExplorer (which is a shiny app) using this comand, and follow instructions using Coho_counts.txt as the main input. 
+
+
 ###Heatmap for DE genes, Site-site comparison
 
 #Read in files of differentially expressed genes:
@@ -44,13 +59,7 @@ DE.mat<-DE.mat[,-1]
 #heatmap of DE genes across all sites
 pheatmap(DE.mat,fontsize_col=20, show_rownames=F, main="Log-fold change for differentially expressed genes as compared to refrence site (Coulter)")
 
-#instal pcaExploreer
-source("https://bioconductor.org/biocLite.R")
-biocLite("pcaExplorer")
-library(pcaExplorer)
-?pcaExplorer
-
-#create 3 plot graph
+#create 3 plot volcano graph
 par(mfrow=c(1,3),oma = c(4, 4, 2, 0), mar=c(2,0,2,.4) )
 # The main plot
 tmp <- deseq2.IssCoulterres
@@ -74,98 +83,10 @@ points(tmp2.sig$baseMean, tmp2.sig$log2FoldChange, pch=20, cex=0.45, col="red")
 #Swamp pts
 tmp3 <- deseq2.SwampCoultres
 plot(tmp3$baseMean, tmp3$log2FoldChange, pch=20, yaxt="n", cex=0.45, ylim=c(-3, 3), log="x", col="darkgray",
-     main="Jenkins v. Coulter")
+     main="Swamp v. Coulter")
 
 tmp3.sig <- deseq2.SwampCoultres[!is.na(deseq2.SwampCoultres$padj) & deseq2.SwampCoultres$padj <= 0.05, ]
 points(tmp2.sig$baseMean, tmp2.sig$log2FoldChange, pch=20, cex=0.45, col="red")
 
 mtext("DEG in Different Streams  (pval <= 0.05)", outer = TRUE, cex = 1.5)
 
-# 2 FC lines
-abline(h=c(-1,1), col="green")
-
-head(tmp)
-sig<-deseq2.res[!is.na(deseq2.res$padj) & deseq2.res$padj <= 0.05, ]
-head(sig)
-?write.table
-write.table(sig, file="sig.txt")
-
-#Gene Clustering 
-library("genefilter")
-library("pheatmap")
-library("grid")
-library("gpar")
-rld<- rlog((deseq2.dds))
-topVarGenes<-head(order(rowVars(assay(rld)),decreasing=TRUE),200)
-?assay
-mat<- assay(rld)[topVarGenes,]
-mat<- mat - rowMeans(mat)
-SWAMP<-mat[,-c(7:18)]
-ISSAQUAH<-mat[,-c(13:24)] 
-mat<-mat[,]
-df<- as.data.frame(colData(rld)[,c("condition","type") ])
-?colData
-pheatmap(ISSAQUAH, annotation_col=df)
-
-#Gene Clustering Pairwise Comparisons
-#SWAMPvCoulter
-data<- read.table ("Coho_counts.txt", header=T)
-rownames(data) <- data$target_id
-data<-data[,-1]
-Swamp<-data[,-c(7:18)]
-deseq2.colData.sw <- data.frame(condition=factor(c(rep("Coulter", 6), rep("Swamp",6))), 
-                             type=factor(rep("paired-end", 12)))
-rownames(deseq2.colData.sw) <- colnames(Swamp)
-deseq2.dds.sw <- DESeqDataSetFromMatrix(countData = Swamp,
-                                     colData = deseq2.colData.sw, 
-                                     design = ~ condition)
-deseq2.dds <- DESeq(deseq2.dds.sw)
-rld.sw<- rlog((deseq2.dds.sw))
-topVarGenes.sw<-head(order(rowVars(assay(rld.sw)),decreasing=TRUE),500)
-mat.sw<- assay(rld.sw)[topVarGenes.sw,]
-mat.sw<- mat.sw - rowMeans(mat.sw)
-df.sw<- as.data.frame(colData(rld.sw)[,c("condition","type") ])
-pheatmap(mat.sw, annotation_col=df.sw)
-
-#IssaquahvCoulter
-#data<- read.table ("Coho_counts.txt", header=T)
-#rownames(data) <- data$target_id
-#data<-data[,-1]
-Issaquah<-data[,-c(13:24)]
-deseq2.colData.IS <- data.frame(condition=factor(c(rep("Coulter", 6), rep("Issaquah",6))), 
-                                type=factor(rep("paired-end", 12)))
-rownames(deseq2.colData.IS) <- colnames(Issaquah)
-deseq2.dds.IS <- DESeqDataSetFromMatrix(countData = Issaquah,
-                                        colData = deseq2.colData.IS, 
-                                        design = ~ condition)
-deseq2.dds.IS <- DESeq(deseq2.dds.IS)
-rld.IS<- rlog((deseq2.dds.IS))
-topVarGenes.IS<-head(order(rowVars(assay(rld.IS)),decreasing=TRUE),200)
-mat.IS<- assay(rld.IS)[topVarGenes.IS,]
-mat.IS<- mat.IS[-1,]
-mat.IS<- mat.IS - rowMeans(mat.IS)
-df.IS<- as.data.frame(colData(rld.IS)[,c("condition","type") ])
-pheatmap(mat.IS, annotation_col=df.IS)
-
-#JenkinsvCoulter
-#data<- read.table ("Coho_counts.txt", header=T)
-#rownames(data) <- data$target_id
-#data<-data[,-1]
-Jenkins<-data[,-c(7:12, 19:24)]
-deseq2.colData.JE <- data.frame(condition=factor(c(rep("Coulter", 6), rep("Jenkins",6))), 
-                                type=factor(rep("paired-end", 12)))
-rownames(deseq2.colData.JE) <- colnames(Jenkins)
-deseq2.dds.JE <- DESeqDataSetFromMatrix(countData = Jenkins,
-                                        colData = deseq2.colData.JE, 
-                                        design = ~ condition)
-deseq2.dds.JE <- DESeq(deseq2.dds.JE)
-rld.JE<- rlog((deseq2.dds.JE))
-topVarGenes.JE<-head(order(rowVars(assay(rld.JE)),decreasing=TRUE),200)
-mat.JE<- assay(rld.JE)[topVarGenes.JE,]
-mat.JE<- mat.JE - rowMeans(mat.JE)
-mat.JE<-mat.JE[-1,]
-df.JE<- as.data.frame(colData(rld.JE)[,c("condition","type") ])
-pheatmap(mat.JE, annotation_col=df.JE)
-
-
-pcaExplorer()

@@ -1,3 +1,4 @@
+*.RDataTmp
 
 *.gz
 
@@ -33,3 +34,5 @@ analysis/Trinity/transcriptome2.fasta.gdx
 
 *.h5
 .Rproj.user
+
+analysis/Differential Expression/.RDataTmp
