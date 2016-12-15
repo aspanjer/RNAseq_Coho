@@ -8,13 +8,14 @@ Coho Salmon (_Oncorhynchus kisutch_) are heavily dependent on small stream habit
 This project uses sequencing data from coho collected at four streams spanning an urban impact gradient. The objectives are:
 
 1. Construct a de novo transcriptome for a non-sequenced species.
-2. Use the annotated Rainbow Trout and Atlantic Salmon genomes to annotate the	resulting transcriptome.
+2. Annotate the resulting transcriptome.
 3. Conduct differential expression analysis between habitat conditions with the intent of identifying biomarkers indicative of toxicant exposure, immune deficiencies, and temperature stress.
 4. Use Gene Ontology analysis to explore the biological function of observed gene expression differences and to help explain the transcriptome in the context of other sequencing work that’s been completed on coho. 
 
-The final figures produced for the class project can be found in [FinalFigures](https://github.com/aspanjer/RNAseq_Coho/tree/master/FinalFigures). This includes a readme file containing captions for the numbered figures. 
+The final figures produced for the class project can be found in [FinalFigures](https://github.com/aspanjer/RNAseq_Coho/tree/master/FinalFigures). This includes a readme file containing captions for the numbered figures. The assembled transcriptome can be found [here](https://github.com/aspanjer/RNAseq_Coho/tree/master/analysis/Transcriptome) and the annotations [here](https://github.com/aspanjer/RNAseq_Coho/tree/master/analysis/Annotation).
 
 [Manuscript.md](https://github.com/aspanjer/RNAseq_Coho/blob/master/Manuscript.md) is the start of a manuscript draft and currently includes methods and results. This is actively being worked on and subject to revison. 
+
 
 ##Directory 
 
